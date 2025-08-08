@@ -18,6 +18,14 @@ Prescription Processing Training Package
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="dashboard">Dashboard</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+</nav>
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -36,8 +44,6 @@ Prescription Processing Training Package
     <div class="nhsuk-grid-column-full">
 
 
-<br>
-      
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
       <h1 class="nhsuk-heading-xl">Performance summary</h1>
@@ -85,7 +91,8 @@ Prescription Processing Training Package
             Change
             </button>
           </div>
-
+<br>
+<br>
       <thead class="nhsuk-table__head">
         <tr>
           <th scope="col" class="nhsuk-table__header">Day</th>
