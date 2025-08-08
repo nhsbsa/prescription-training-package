@@ -17,7 +17,10 @@
   service name is needed. You can also reuse this variable
   within the <h1>, where they are the same.
 -->
-{% set pageName = "" %}
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
 
 <!-- For adding a breadcrumb or back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
@@ -32,7 +35,7 @@
 
       <!-- You can delete the lines below -->
       <h2 class="nhsuk-heading-l">
-        NHS prototype kit
+        Prescription Processing Training Package
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
       </h2>
       <hr>
@@ -42,7 +45,7 @@
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <h1 class="nhsuk-heading-xl">
-        {{ serviceName }}
+        {{ Prescription Processing Training Package }}
       </h1>
 
       <p>Set the service name for your prototype by editing <strong>/app/config.js</strong>.</p>
