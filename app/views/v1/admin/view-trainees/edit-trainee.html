@@ -1,0 +1,108 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="list-trainees">List of trainees</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
+      <h1 class="nhsuk-heading-xl">Trainee profile</h1>
+
+        <table class="nhsuk-table">
+        <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+            <th scope="col" class="nhsuk-table__header">Trainees name</th>
+            <td class="nhsuk-table__cell">John Philips (Jophi)</td>
+            </tr>
+
+            <tr class="nhsuk-table__row">
+            <th scope="col" class="nhsuk-table__header">Start date</th>
+            <td class="nhsuk-table__cell">1 April 2025</td>
+            </tr>
+
+            <tr class="nhsuk-table__row">
+            <th scope="col" class="nhsuk-table__header">Trainees manager</th>
+            <td class="nhsuk-table__cell">
+              <input class="nhsuk-input nhsuk-input--width-6" id="input-width-5" name="test-width-5" type="text" style="width: 500px;" value="Matthew John (majoh)">                    
+            </td>
+            </tr>
+
+            <tr class="nhsuk-table__row">
+            <th scope="col" class="nhsuk-table__header">Training group</th>
+            <td class="nhsuk-table__cell"><input class="nhsuk-input nhsuk-input--width-6" id="input-width-5" name="test-width-5" type="text" style="width: 500px;" value="Group 5">                    
+            </td>
+            </tr>
+
+            <tr class="nhsuk-table__row">
+            <th scope="col" class="nhsuk-table__header">Status</th>
+            <td class="nhsuk-table__cell">                    
+              <select class="nhsuk-select" id="select-1" name="select-1" style="width: 500px;">
+                        <option value="1">Select option</option>
+                        <option value="2" selected> In progress</option>
+                        <option value="3"> Completed</option>
+                        <option value="4"> Not started</option>
+                        <option value="5"> New</option>
+              </select>
+            </td>
+            </tr>
+
+        </tbody>
+        </table>
+
+
+
+         <a href="view-trainee" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Update
+        </a>
+        <a href="list-trainees" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+          Back to profile
+        </a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

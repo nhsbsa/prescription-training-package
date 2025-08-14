@@ -1,0 +1,115 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Remove this answer from the pool</h1>
+
+
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+        Show prescription image
+        </span>
+    </summary>
+    <div class="nhsuk-image">
+
+        <!-- Image / Prescription scan -->  
+            <img class="nhsuk-image__img" src="/images/image_png.png" alt="precription form.">    
+
+    </div>
+    </details>
+    
+
+    <!-- Expected input -->
+
+    <table class="nhsuk-table">
+    <thead class="nhsuk-table__head">
+        <tr>
+        <th scope="col" class="nhsuk-table__header">Product</th>
+        <th scope="col" class="nhsuk-table__header">Qty</th>
+        </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">64750 - Biotene Oralbalance dry mouth saliva replacement gel 50g</td>
+        <td class="nhsuk-table__cell">1</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <form method="post" action="/removeAnswerpool">
+    <!-- Radios 1 -->
+    <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
+            Do you want to remove answer from pool
+        </h3>
+        </legend>
+        <div class="nhsuk-radios">
+        <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-3" name="removeAnswerpool" value="yes" type="radio" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+            Yes
+            </label>
+        </div>
+        <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-4" name="removeAnswerpool" value="no" type="radio">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+            No
+            </label>
+        </div>
+        </div>
+    </fieldset>
+    </div>
+
+<br>
+
+
+        <button class="nhsuk-button" type="submit">Save</button>
+        
+        <a class="nhsuk-button nhsuk-button--secondary" href="error-review">Back to error list</a>
+
+    </form>
+
+{% endblock %}
