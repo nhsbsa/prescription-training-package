@@ -1,0 +1,102 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
+      <h1 class="nhsuk-heading-xl">Reports</h1>
+
+<br>
+          <table class="nhsuk-table">
+            <thead class="nhsuk-table__head">
+                <tr>
+                <th scope="col" class="nhsuk-table__header">Reports type</th>
+                <th scope="col" class="nhsuk-table__header">Action</th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Trainee tracker</td>   
+                <td class="nhsuk-table__cell"><a href="trainee-tracker">View</a></td>       
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">All trainee daily stats</td>   
+                <td class="nhsuk-table__cell"><a href="all-trainee-daily-stats">View</a></td> 
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Trainee activity log</td>   
+                <td class="nhsuk-table__cell"><a href="trainee-activity-log">View</a></td> 
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Error frequency report</td>   
+                <td class="nhsuk-table__cell"><a href="error-frequency-report">View</a></td> 
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Admin check data</td>   
+                <td class="nhsuk-table__cell"><a href="admin-check-data">View</a></td> 
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">TMS Data</td>   
+                <td class="nhsuk-table__cell"><a href="tms-data">View</a></td> 
+                </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+     
+
+  <a href="../dashboard" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+  Back to dashboard
+</a>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
