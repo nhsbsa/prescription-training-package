@@ -9,11 +9,10 @@ module.exports = router;
 
 // Admin - checks-complete //
 
-router.post(/removeAnswerpool/, function (req, res) {
+router.post(/removeAnswerpool/, (req, res) => {
+  const dereg = req.session.data.removeAnswerpool;
 
-  const dereg = req.session.data['removeAnswerpool']
-
-  if (dereg === "yes") {
+  if (dereg === 'yes') {
     res.redirect('/v1/admin/checks-complete/confirmation-removed-pool');
   } else {
     res.redirect('/v1/admin/checks-complete/error-review-2');
