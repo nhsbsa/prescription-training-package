@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,12 +20,19 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
+
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -51,15 +58,18 @@ Prescription Processing Training Package
 
         <p class="nhsuk-body">Implement an audit trail or version history feature to track changes made to model answers.</p>
 
-<br>
         <!--Fieldset 1-->  
-        <div class="nhsuk-form-group">
+       <div class="nhsuk-form-group">
 
-        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                 <h2 class="nhsuk-heading-m">
-                    From
-                </h2>
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+      <h2 class="nhsuk-fieldset__heading">
+        From
+      </h2>
+    </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, 15 3 2025
+    </div>
             <div class="nhsuk-date-input" id="example">
             <div class="nhsuk-date-input__item">
                 <div class="nhsuk-form-group">
@@ -86,13 +96,19 @@ Prescription Processing Training Package
         </fieldset>
         </div>
 
-         <div class="nhsuk-form-group">
+    
 
-        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                 <h2 class="nhsuk-heading-m">
-                    To
-                </h2>
+       <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+      <h2 class="nhsuk-fieldset__heading">
+       To
+      </h2>
+    </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, 15 3 2025
+    </div>
             <div class="nhsuk-date-input" id="example">
             <div class="nhsuk-date-input__item">
                 <div class="nhsuk-form-group">

@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,11 +20,16 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -67,7 +72,7 @@ Prescription Processing Training Package
             </thead>
             <tbody class="nhsuk-table__body">
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><a href="error-review">Janie Doe (jode)</a></td>
+                <td class="nhsuk-table__cell"><a href="error-review">John Philips (Jophi)</a></td>
                 <td class="nhsuk-table__cell">15 May 2025</td>
                 <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">50</td>
@@ -82,7 +87,7 @@ Prescription Processing Training Package
 
 
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><a href="error-review">John Smith (josmi)</a></td>
+                <td class="nhsuk-table__cell"><a href="">John Smith (josmi)</a></td>
                 <td class="nhsuk-table__cell">15 May 2025</td>
                 <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">50</td>

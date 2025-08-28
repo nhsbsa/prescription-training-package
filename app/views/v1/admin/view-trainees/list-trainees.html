@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,11 +20,16 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -82,6 +87,7 @@ Prescription Processing Training Package
                         </label>
                         <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="status" name="status" type="text" inputmode="numeric">
                             <option value="Select">Select a status</option>
+                            <option value="new">New</option>
                             <option value="in-progress">Ongoing</option>
                             <option value="completed">Completed</option>
                         </select>
@@ -108,66 +114,94 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell">James Jacob (jaja)</td>
                 <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
-                <td class="nhsuk-table__cell">Ongoing</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">New</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="assign-trainee">Assign</a>
                 </td>
                 </tr>
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
+                <td class="nhsuk-table__cell">John Philips (Jophi)</td>
+                <td class="nhsuk-table__cell">Week 1</td>
+                <td class="nhsuk-table__cell">Matthew John (majoh)</td>
                 <td class="nhsuk-table__cell">Ongoing</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="view-trainee">View</a>
                 </td>
                 </tr>
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
+                <td class="nhsuk-table__cell">Michael Roberts (Mirob)</td>
+                <td class="nhsuk-table__cell">Week 1</td>
+                <td class="nhsuk-table__cell">Matthew John (majoh)</td>
                 <td class="nhsuk-table__cell">Ongoing</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
+                <td class="nhsuk-table__cell">David Carter (Dacar)</td>
+                <td class="nhsuk-table__cell">Week 1</td>
+                <td class="nhsuk-table__cell">Matthew John (majoh)</td>
                 <td class="nhsuk-table__cell">Ongoing</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
+                <td class="nhsuk-table__cell">Sophia Turner (Sotur)</td>
+                <td class="nhsuk-table__cell">Week 1</td>
+                <td class="nhsuk-table__cell">John Smith (josmi)</td>
                 <td class="nhsuk-table__cell">Ongoing</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
+                <td class="nhsuk-table__cell">Daniel Brooks (Dabro)</td>
+                <td class="nhsuk-table__cell">Week 1</td>
+                <td class="nhsuk-table__cell">Matthew John (majoh)</td>
                 <td class="nhsuk-table__cell">Ongoing</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
                  <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell">John Smith</td>
+                <td class="nhsuk-table__cell">Emily Sanders (Emsan)</td>
+                <td class="nhsuk-table__cell">Week 2</td>
+                <td class="nhsuk-table__cell">John Smith (josmi)</td>
                 <td class="nhsuk-table__cell">Ongoing</td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
+                    <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Thomas Gray (Thgra)</td>
+                <td class="nhsuk-table__cell">Week 2</td>
+                <td class="nhsuk-table__cell">Matthew John (majoh)</td>
+                <td class="nhsuk-table__cell">Ongoing</td>
+                <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link" href="#">View</a>
+                </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Olivia Harris (Olhar)</td>
+                <td class="nhsuk-table__cell">Week 2</td>
+                <td class="nhsuk-table__cell">John Smith (josmi)</td>
+                <td class="nhsuk-table__cell">Ongoing</td>
+                <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link" href="#">View</a>
+                </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Chris Walker (Chwal)</td>
+                <td class="nhsuk-table__cell">Week 2</td>
+                <td class="nhsuk-table__cell">John Smith (josmi)</td>
+                <td class="nhsuk-table__cell">Ongoing</td>
+                <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link" href="#">View</a>
+                </td>
+                </tr>
+                
             </tbody>
           </table>
 
@@ -191,9 +225,6 @@ Prescription Processing Training Package
 
      
 
-  <a href="../dashboard" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-  Back to dashboard
-</a>
 
       <!-- End of content -->
 

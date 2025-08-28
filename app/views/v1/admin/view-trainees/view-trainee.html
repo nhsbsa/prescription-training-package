@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -52,54 +52,60 @@ Prescription Processing Training Package
       <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
       <h1 class="nhsuk-heading-xl">Trainee profile</h1>
 
-        <table class="nhsuk-table">
-        <tbody class="nhsuk-table__body">
-            <tr class="nhsuk-table__row">
-            <th scope="col" class="nhsuk-table__header">Trainees name</th>
-            <td class="nhsuk-table__cell">John Philips (Jophi)</td>
-            <td class="nhsuk-table__cell"></td>
-            </tr>
 
-            <tr class="nhsuk-table__row">
-            <th scope="col" class="nhsuk-table__header">Start date</th>
-            <td class="nhsuk-table__cell">1 April 2025</td>
-            <td class="nhsuk-table__cell"><a href="assign-trainee">Change</a></td>
-            </tr>
 
-            <tr class="nhsuk-table__row">
-            <th scope="col" class="nhsuk-table__header">Trainees manager</th>
-            <td class="nhsuk-table__cell">Matthew John (majoh)</td>
-            <td class="nhsuk-table__cell"><a href="edit-trainee">Change</a></td>
-            </tr>
-
-            <tr class="nhsuk-table__row">
-            <th scope="col" class="nhsuk-table__header">Training group</th>
-            <td class="nhsuk-table__cell">Group 5</td>
-            <td class="nhsuk-table__cell"><a href="">Change</a></td>
-            </tr>
-
-            <tr class="nhsuk-table__row">
-            <th scope="col" class="nhsuk-table__header">Status</th>
-            <td class="nhsuk-table__cell">
-                <strong class="nhsuk-tag nhsuk-tag--green">
-                    In progress
+        <dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Trainee name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     John Philips (Jophi)
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Start date
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     1 April 2025
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Trainees manager
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     	Matthew John (majoh)
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Training group
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+    Group 5
+    </dd>
+  </div>
+    <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     Status
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <strong class="nhsuk-tag nhsuk-tag--green">
+                   On going
                 </strong>
-            </td>
-            <td class="nhsuk-table__cell"><a href="">Change</a></td>
-            </tr>
+    </dd>
+  </div>
+</dl>
 
-            <tr class="nhsuk-table__row">
-            <th scope="col" class="nhsuk-table__header">Quality check</th>
-            <td class="nhsuk-table__cell"></td>
-            <td class="nhsuk-table__cell"><a href="view-error-list">View</a></td>
-            </tr>
-        </tbody>
-        </table>
+<a href="view-error-list" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+    View quality check 
+</a>
 
-
-        <a href="list-trainees" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-          Back to list of trainees
-        </a>
+<a href="edit-trainee" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+  Edit information
+</a>
       <!-- End of content -->
 
     </div>

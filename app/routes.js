@@ -7,14 +7,37 @@ const router = express.Router();
 
 module.exports = router;
 
-// Admin - checks-complete //
+// admin //
 
 router.post(/removeAnswerpool/, (req, res) => {
   const dereg = req.session.data.removeAnswerpool;
 
   if (dereg === 'yes') {
-    res.redirect('/v1/admin/checks-complete/confirmation-removed-pool');
+    res.redirect('confirmation-removed-pool');
   } else {
-    res.redirect('/v1/admin/checks-complete/error-review-2');
+    res.redirect('error-review-2');
+  }
+});
+
+router.post(/Adminsignout/, (req, res) => {
+  const Adminsignout = req.session.data.Adminsignout;
+
+  if (Adminsignout === 'yes') {
+    res.redirect('logout-confirm-admin');
+  } else {
+    res.redirect('admin/dashboard');
+  }
+});
+
+
+// trainee //
+
+router.post(/signout/, (req, res) => {
+  const signout = req.session.data.signout;
+
+  if (signout === 'yes') {
+    res.redirect('logout-confirm-trainee');
+  } else {
+    res.redirect('trainee/dashboard');
   }
 });

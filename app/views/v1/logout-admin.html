@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-no-access.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -34,16 +34,38 @@ Prescription Processing Training Package
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
 
+    <h1 class="nhsuk-heading-xl">Are you sure you want to sign out?</h1>
+    
 
-        <div class="nhsuk-panel">
-        <h1 class="nhsuk-panel__title">
-            You have been successfully logged out
-        </h1>
-        </div>
-<br>
-        <p class="nhsuk-body-m"><a href="login">Login to Prescription processing training package</a></p>
+      <div class="nhsuk-form-group">
 
-<!-- End of content -->
+        <form action="Adminsignout" method="post">
+
+          <div class="nhsuk-radios nhsuk-radios--inline">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="inline-1" name="Adminsignout" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="inline-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="inline-2" name="Adminsignout" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="inline-2">
+                No
+              </label>
+            </div>
+      
+          </div>
+       
+      
+      </div>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+     </form>
 
     </div>
   </div>

@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-admin.html' %}
+{% extends 'layout-no-access.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -30,23 +30,21 @@ Prescription Processing Training Package
 {% block content %}
 
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
 
-    <!-- Expected input -->
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
 
+
+        <div class="nhsuk-panel">
+        <h1 class="nhsuk-panel__title">
+            You have been successfully logged out
+        </h1>
+        </div>
 <br>
+        <p class="nhsuk-body-m"><a href="login-admin">Login to Prescription processing training package</a></p>
 
-    <div class="nhsuk-panel">
-    <h1 class="nhsuk-panel__title">
-        Report should be in process of downloading
-    </h1>
+<!-- End of content -->
+
     </div>
-
-<br>
-
-<p><a href="reports">Back to reports dashboard</a></p>
-
-
-
+  </div>
 {% endblock %}
