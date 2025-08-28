@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,11 +20,17 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -51,15 +57,18 @@ Prescription Processing Training Package
 
         <p class="nhsuk-body">Enter the date range, trainee name and select a training group to download the correct report.</p>
 
-<br>
         <!--Fieldset 1-->  
-        <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group">
 
-        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                 <h2 class="nhsuk-heading-m">
-                    From
-                </h2>
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+      <h2 class="nhsuk-fieldset__heading">
+        From
+      </h2>
+    </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, 15 3 2025
+    </div>
             <div class="nhsuk-date-input" id="example">
             <div class="nhsuk-date-input__item">
                 <div class="nhsuk-form-group">
@@ -86,13 +95,19 @@ Prescription Processing Training Package
         </fieldset>
         </div>
 
-         <div class="nhsuk-form-group">
+    
 
-        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-            <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                 <h2 class="nhsuk-heading-m">
-                    To
-                </h2>
+       <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+      <h2 class="nhsuk-fieldset__heading">
+       To
+      </h2>
+    </legend>
+    <div class="nhsuk-hint" id="example-hint">
+      For example, 15 3 2025
+    </div>
             <div class="nhsuk-date-input" id="example">
             <div class="nhsuk-date-input__item">
                 <div class="nhsuk-form-group">
@@ -120,12 +135,21 @@ Prescription Processing Training Package
         </div>
 
         <!--Fieldset 2-->
-        <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
-            Trainee name
-        </label> <input class="nhsuk-input nhsuk-u-secondary-text-color" id="example" name="example" type="text" value="Enter name or cipher" style="width: 500px;"
-            onfocus="if(this.value==='Enter name or cipher'){this.value=''; this.classList.remove('nhsuk-u-secondary-text-color');}">
-        </div>
+       
+         <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                   Trainee name
+                  </label>
+                 
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text" autocomplete="off" list="manager" >
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="manager">
+                  <option value="Michael Roberts (Mirob)"></option>
+                  <option value="Matthew John (majoh)"></option>
+                  <option value="Martin Lewis (Malew)"></option>
+                  <option value="Melissa Carter (Mecar)"></option>
+                </datalist>
 
         <!--Fieldset 3-->
         <div class="nhsuk-form-group" >
@@ -135,7 +159,7 @@ Prescription Processing Training Package
                 <div class="nhsuk-hint" id="contact-hint">
                 Select all trainee, a group or type a specific trainee
                 </div>
-            <select class="nhsuk-select" id="select-1" name="select-1" style="width:500px">
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
               <option value="1"selected>Group 1</option>
                <option value="2">Group 2</option>
               <option value="3">Group 3</option>
@@ -144,8 +168,7 @@ Prescription Processing Training Package
             </select>
         </div>
 
-
-<br> 
+<br>
 
 <a href="error-frequency-report-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
   Export

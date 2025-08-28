@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,11 +20,17 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -50,19 +56,23 @@ Prescription Processing Training Package
       <h1 class="nhsuk-heading-xl">TMS data</h1>
 
         <p class="nhsuk-body">Enter trainee name to export the correct report</p>
+ <!--Fieldset 1-->
+       <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                   Trainee name
+                  </label>
+                 
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text" autocomplete="off" list="manager" >
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="manager">
+                  <option value="Michael Roberts (Mirob)"></option>
+                  <option value="Matthew John (majoh)"></option>
+                  <option value="Martin Lewis (Malew)"></option>
+                  <option value="Melissa Carter (Mecar)"></option>
+                </datalist>
 
 <br>
-        <!--Fieldset 1-->
-        <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
-            Trainee name
-        </label> <input class="nhsuk-input nhsuk-u-secondary-text-color" id="example" name="example" type="text" value="Enter name or cipher" style="width: 500px;"
-            onfocus="if(this.value==='Enter name or cipher'){this.value=''; this.classList.remove('nhsuk-u-secondary-text-color');}">
-        </div>
-
-
-
-<br> 
 
         <a href="tms-data-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
         Export

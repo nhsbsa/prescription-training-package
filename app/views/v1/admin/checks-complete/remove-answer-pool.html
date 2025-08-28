@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,11 +20,16 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -77,7 +82,7 @@ Prescription Processing Training Package
     </tbody>
     </table>
 
-    <form method="post" action="/removeAnswerpool">
+    <form method="post" action="removeAnswerpool">
     <!-- Radios 1 -->
     <div class="nhsuk-form-group">
     <fieldset class="nhsuk-fieldset">
@@ -88,7 +93,7 @@ Prescription Processing Training Package
         </legend>
         <div class="nhsuk-radios">
         <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-inline-3" name="removeAnswerpool" value="yes" type="radio" checked>
+            <input class="nhsuk-radios__input" id="example-inline-3" name="removeAnswerpool" value="yes" type="radio">
             <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
             Yes
             </label>
@@ -106,9 +111,7 @@ Prescription Processing Training Package
 <br>
 
 
-        <button class="nhsuk-button" type="submit">Save</button>
-        
-        <a class="nhsuk-button nhsuk-button--secondary" href="error-review">Back to error list</a>
+        <button class="nhsuk-button" type="submit">Continue</button>
 
     </form>
 

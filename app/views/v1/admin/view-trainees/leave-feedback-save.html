@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -21,8 +21,26 @@ Prescription Processing Training Package
     <li class="nhsuk-breadcrumb__item">
       <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
     </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="list-trainees">List of trainees</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="view-trainee">Trainee profile</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="view-error-list">Quality check</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="error-details-2">Error details</a>
+    </li>
     <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
+    <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -33,7 +51,7 @@ Prescription Processing Training Package
 
 
 <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Error review of James Jacob (jajb)</h1>
-<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Completed on 25 March 2025 10:23 am</p>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Feedback for 25 March 2025 errors</p>
 
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
@@ -72,15 +90,10 @@ Prescription Processing Training Package
                   Save and continue
                 </button> -->
 
-               
-<br>
 
-              <a href="leave-feedback-edit" class="nhsuk-button">Edit</a>
+              <a href="leave-feedback-edit" class="nhsuk-button">Edit feedback</a>
 
-               <a href="view-error-list" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-                  Back to error list
-               </a>
-
+            
 
             </div>
 

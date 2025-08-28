@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -20,11 +20,16 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
-    </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   
   </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
 {% endblock %}
 
@@ -49,7 +54,6 @@ Prescription Processing Training Package
       <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
       <h1 class="nhsuk-heading-xl">Reports</h1>
 
-<br>
           <table class="nhsuk-table">
             <thead class="nhsuk-table__head">
                 <tr>
@@ -86,14 +90,6 @@ Prescription Processing Training Package
           </table>
 
 
-
-
-
-     
-
-  <a href="../dashboard" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-  Back to dashboard
-</a>
 
       <!-- End of content -->
 

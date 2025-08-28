@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'layout-admin.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -23,9 +23,22 @@ Prescription Processing Training Package
     <li class="nhsuk-breadcrumb__item">
       <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
     </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="list-trainees">List of trainees</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="view-trainee">Trainee profile</a>
+    </li>
     <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
+    <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
 </nav>
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -47,7 +60,7 @@ Prescription Processing Training Package
 
       <!-- Change the page title here -->
       <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
-      <h1 class="nhsuk-heading-xl">My quality check</h1>
+      <h1 class="nhsuk-heading-xl">Quality check</h1>
 
         <div class="nhsuk-form-group" >
             <label class="nhsuk-label" for="select-1">
@@ -112,13 +125,6 @@ Prescription Processing Training Package
 
 
 
-
-
-     
-
-<a href="list-trainees" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-  Back to trainees
-</a>
 
       <!-- End of content -->
 
