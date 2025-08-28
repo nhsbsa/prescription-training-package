@@ -18,7 +18,7 @@
   "author": "https://github.com/nhsuk/",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.27.2",
     "accessible-autocomplete": "^3.0.1",
     "body-parser": "^2.2.0",
