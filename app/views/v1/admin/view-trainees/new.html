@@ -1,0 +1,158 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+      <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
+      <h1 class="nhsuk-heading-xl">List of trainees</h1>
+
+
+     <div style="display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap;">
+
+  <!-- Search for trainee -->
+  <div>
+    <label class="nhsuk-label" for="input-width-10">Search for trainee</label>
+    <input
+      class="nhsuk-input nhsuk-input--width-10 nhsuk-u-secondary-text-color"
+      id="input-width-10"
+      name="test-width-10"
+      type="text"
+      placeholder="Enter name or cipher"
+    />
+  </div>
+
+
+
+  <!-- Group Select -->
+  <div>
+    <label class="nhsuk-label" for="group">Select group</label>
+    <select
+      class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
+      id="group"
+      name="group"
+    >
+      <option value="Select">Show all</option>
+      <option value="group1">Group 1</option>
+      <option value="group2">Group 2</option>
+      <option value="group3">Group 3</option>
+      <option value="group4">Group 4</option>
+      <option value="group5">Group 5</option>
+      <option value="group6">Group 6</option>
+    </select>
+  </div>
+
+  <!-- Logged In As & Go Button -->
+  <div style="display: flex; align-items: flex-end; gap: 1rem;">
+    <!-- Dropdown -->
+    <div>
+      <label class="nhsuk-label" for="select-1">Status</label>
+      <select
+        class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
+        id="select-1"
+        name="select-1"
+      >
+          <option value="list-trainees" >Show all</option>
+                        <option value="New" selected> New</option>
+                     <option value="Ongoing" >Ongoing</option>
+                        <option value="successful"> Successful</option>
+                        <option value="unsuccessful"> Unsuccessful</option>
+                        <option value="cancelled" >Cancelled</option>
+      </select>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <button class="nhsuk-button" onclick="goToSelectedPage()">Search</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function goToSelectedPage() {
+    const select = document.getElementById("select-1");
+    const selectedValue = select.value;
+    window.location = selectedValue;
+  }
+</script>
+
+<div class="nhsuk-u-padding-bottom-8"></div>
+
+          <table class="nhsuk-table">
+            <thead class="nhsuk-table__head">
+                <tr>
+                <th scope="col" class="nhsuk-table__header">Trainees</th>
+                <th scope="col" class="nhsuk-table__header">Progress</th>
+                <th scope="col" class="nhsuk-table__header">Manager</th>
+                <th scope="col" class="nhsuk-table__header">Status</th>
+                <th scope="col" class="nhsuk-table__header">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
+                <td class="nhsuk-table__cell">Week 0</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell"> <strong class="nhsuk-tag nhsuk-tag--blue">New</strong></td>
+                <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link" href="assign-trainee">Assign</a>
+                </td>
+                </tr>
+               
+                
+            </tbody>
+          </table>
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

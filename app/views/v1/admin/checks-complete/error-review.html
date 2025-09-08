@@ -167,30 +167,53 @@ Prescription Processing Training Package
 <!-- Radios 1 -->
 <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-      <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
-        Is the master data incorrect?
-      </h3>
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+      Is the master data incorrect?
     </legend>
-    <div class="nhsuk-radios">
+    <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional">
+      <!-- Yes with conditional radios -->
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-          Yes
-        </label>
+        <input class="nhsuk-radios__input"
+               id="example-inline-1"
+               name="example-inline"
+               type="radio"
+               value="yes"
+               aria-controls="conditional-example-inline-1"
+               aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">Yes</label>
       </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-example-inline-1">
+        <h3 class="nhsuk-heading-s" style="margin-bottom: 8px; display: inline-block;">
+          Is the trainee's input correct?
+        </h3>
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-reason-1" name="example-inline-reason" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-1">Yes</label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-reason-2" name="example-inline-reason" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-2">No</label>
+          </div>
+        </div>
+      </div>
+      <!-- No -->
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no" >
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-          No
-        </label>
+        <input class="nhsuk-radios__input"
+               id="example-inline-2"
+               name="example-inline"
+               type="radio"
+               value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">No</label>
       </div>
     </div>
   </fieldset>
 </div>
+<!-- Radios 1 ends here-->
 
 <br>
 
+<form method="post" action="questionremove">
 <!-- Radios 2 -->
 <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
@@ -201,13 +224,13 @@ Prescription Processing Training Package
     </legend>
     <div class="nhsuk-radios">
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-3" name="example-inline-2" type="radio" value="yes">
+        <input class="nhsuk-radios__input" id="example-inline-3" name="questionremove" type="radio" value="yes">
         <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
           Yes
         </label>
       </div>
       <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-4" name="example-inline-2" type="radio" value="no" >
+        <input class="nhsuk-radios__input" id="example-inline-4" name="questionremove" type="radio" value="no" >
         <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
           No
         </label>
@@ -218,10 +241,9 @@ Prescription Processing Training Package
 
 
 <br>
+ <button class="nhsuk-button" type="submit">Save and continue</button>
 
-<a class="nhsuk-button" href="error-review-2">Save and continue</a>
-
-
+</form>
 
 <!--pagination-->
 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
