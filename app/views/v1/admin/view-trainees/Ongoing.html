@@ -79,7 +79,7 @@ Prescription Processing Training Package
       id="group"
       name="group"
     >
-      <option value="Select">Show all</option>
+      <option value="Select">Select a group</option>
       <option value="group1">Group 1</option>
       <option value="group2">Group 2</option>
       <option value="group3">Group 3</option>
@@ -93,15 +93,15 @@ Prescription Processing Training Package
   <div style="display: flex; align-items: flex-end; gap: 1rem;">
     <!-- Dropdown -->
     <div>
-      <label class="nhsuk-label" for="select-1">Status</label>
+      <label class="nhsuk-label" for="select-1">Logged in as</label>
       <select
         class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
         id="select-1"
         name="select-1"
       >
-          <option value="list-trainees" selected>Show all</option>
+          <option value="list-trainees" >Show all</option>
                         <option value="New"> New</option>
-                     <option value="Ongoing" >Ongoing</option>
+                     <option value="Ongoing" selected>Ongoing</option>
                         <option value="successful"> Successful</option>
                         <option value="unsuccessful"> Unsuccessful</option>
                         <option value="cancelled" >Cancelled</option>
@@ -136,15 +136,7 @@ Prescription Processing Training Package
                 </tr>
             </thead>
             <tbody class="nhsuk-table__body">
-                <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">James Jacob (jaja)</td>
-                <td class="nhsuk-table__cell">Week 0</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell"> <strong class="nhsuk-tag nhsuk-tag--blue">New</strong></td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="assign-trainee">Assign</a>
-                </td>
-                </tr>
+              
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell">John Philips (Jophi)</td>
                 <td class="nhsuk-table__cell">Week 1</td>
@@ -199,35 +191,43 @@ Prescription Processing Training Package
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
-                    <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">Thomas Gray (Thgra)</td>
+                   <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">David Carter (Dacar)</td>
                 <td class="nhsuk-table__cell">Week 2</td>
                 <td class="nhsuk-table__cell">Matthew John (majoh)</td>
-                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">Successful</strong></td>
+                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Ongoing</strong></td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
-               
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">Chris Walker (Chwal)</td>
+                <td class="nhsuk-table__cell">Sophia Turner (Sotur)</td>
                 <td class="nhsuk-table__cell">Week 2</td>
                 <td class="nhsuk-table__cell">John Smith (josmi)</td>
-                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--grey">Cancelled</strong></td>
+                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Ongoing</strong></td>
+                <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link" href="#">View</a>
+                </td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Daniel Brooks (Dabro)</td>
+                <td class="nhsuk-table__cell">Week 2</td>
+                <td class="nhsuk-table__cell">Matthew John (majoh)</td>
+                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Ongoing</strong></td>
+                <td class="nhsuk-table__cell">
+                    <a class="nhsuk-link" href="#">View</a>
+                </td>
+                </tr>
+                 <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">Emily Sanders (Emsan)</td>
+                <td class="nhsuk-table__cell">Week 2</td>
+                <td class="nhsuk-table__cell">John Smith (josmi)</td>
+                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Ongoing</strong></td>
                 <td class="nhsuk-table__cell">
                     <a class="nhsuk-link" href="#">View</a>
                 </td>
                 </tr>
                 
-                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell">Olivia Harris (Olhar)</td>
-                <td class="nhsuk-table__cell">Week 4</td>
-                <td class="nhsuk-table__cell">John Smith (josmi)</td>
-                <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">Unsuccessful</strong></td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">View</a>
-                </td>
-                </tr>
             </tbody>
           </table>
 
@@ -239,7 +239,7 @@ Prescription Processing Training Package
       <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
         <span class="nhsuk-pagination__title">Next</span>
         <span class="nhsuk-u-visually-hidden">:</span>
-        <span class="nhsuk-pagination__page">Page 1 of 6</span>
+        <span class="nhsuk-pagination__page">Page 1 of 2</span>
         <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
           <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
         </svg>

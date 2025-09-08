@@ -26,6 +26,15 @@ router.post(/Adminsignout/, (req, res) => {
   }
 });
 
+router.post(/questionremove/, (req, res) => {
+  const { questionremove } = req.session.data;
+  if (questionremove === 'yes') {
+    res.redirect('remove-answer-pool');
+  } else {
+    res.redirect('error-review-2');
+  }
+});
+
 // trainee //
 router.post(/signout/, (req, res) => {
   const { signout } = req.session.data;
