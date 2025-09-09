@@ -52,7 +52,7 @@ Prescription Processing Training Package
 
 
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
+     
       <h1 class="nhsuk-heading-xl">Error frequency report</h1>
 
         <p class="nhsuk-body">Enter the date range, trainee name and select a training group to download the correct report.</p>
@@ -134,13 +134,17 @@ Prescription Processing Training Package
         </fieldset>
         </div>
 
+      
+
         <!--Fieldset 2-->
        
          <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="autocomplete-input">
                    Trainee name
                   </label>
-                 
+                   <div class="nhsuk-hint" id="contact-hint">
+                Choose one to enter. Either trainee name or select a training group
+                </div>
                   <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text" autocomplete="off" list="manager" >
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
@@ -157,10 +161,12 @@ Prescription Processing Training Package
               Select a training group
             </label>
                 <div class="nhsuk-hint" id="contact-hint">
-                Select all trainee, a group or type a specific trainee
+               Choose one to enter. Either trainee name or select a training group
                 </div>
             <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
-              <option value="1"selected>Group 1</option>
+              
+              <option value="Not select"selected></option>
+              <option value="1">Group 1</option>
                <option value="2">Group 2</option>
               <option value="3">Group 3</option>
               <option value="4">Group 4</option>
@@ -174,6 +180,22 @@ Prescription Processing Training Package
   Export
 </a>
 
+
+<br>
+<br>
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Error example
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p class="nhsuk-body">If user enter trainee name and training group together within the same export.
+      <a href="error-frequency-report-error">Show error message</a>
+    </p>
+
+  </div>
+</details>
       <!-- End of content -->
 
     </div>
