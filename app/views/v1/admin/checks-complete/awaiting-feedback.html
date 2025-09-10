@@ -61,14 +61,14 @@ Prescription Processing Training Package
   <div style="display: flex; align-items: flex-end; gap: 1rem;">
     <!-- Dropdown -->
     <div>
-      <label class="nhsuk-label" for="select-1">Filter by select a status</label>
+      <label class="nhsuk-label" for="select-1">Filter by status</label>
       <select
         class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
         id="select-1"
         name="select-1"
       >
                      
-                        <option value="checks-to-complete" >Error review queue</option>
+                        <option value="checks-to-complete" >Awaiting error review</option>
                             <option value="awaiting-feedback"selected>Awaiting feedback</option>
       </select>
     </div>
@@ -102,20 +102,22 @@ Prescription Processing Training Package
                 <th scope="col" class="nhsuk-table__header">Date</th>
                 <th scope="col" class="nhsuk-table__header">Latest checker</th>
                 <th scope="col" class="nhsuk-table__header">Volume processed</th>
-                <th scope="col" class="nhsuk-table__header">Total error mismatched</th>
+                <th scope="col" class="nhsuk-table__header">Total errors</th>
                 <th scope="col" class="nhsuk-table__header">Errors reviewed</th>
-                <th scope="col" class="nhsuk-table__header">Total minutes trainee</th>
+                <th scope="col" class="nhsuk-table__header">Total minutes taken</th>
+                 <th scope="col" class="nhsuk-table__header">Action</th>
                 </tr>
             </thead>
             <tbody class="nhsuk-table__body">
                 <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><a href="error-review">John Philips (Jophi)</a></td>
+                <td class="nhsuk-table__cell"><a href="error-review-view-awaiting-feedback">John Philips (Jophi)</a></td>
                 <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="error-details">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -123,11 +125,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="">John Smith (josmi)</a></td>
                 <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -135,11 +138,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">George Paul (gepl)</a></td>
                 <td class="nhsuk-table__cell">16 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -147,11 +151,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Peter Paul (pepl)</a></td>
                 <td class="nhsuk-table__cell">16 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -159,11 +164,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Daniel Miller (damil)</a></td>
                 <td class="nhsuk-table__cell">16 May 2025</td>
-               <td class="nhsuk-table__cell"></td>
+               <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -171,11 +177,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Micheal John (mijo)</a></td>
                 <td class="nhsuk-table__cell">17 May 2025</td>
-               <td class="nhsuk-table__cell"></td>
+               <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -183,22 +190,24 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Micheal Jackson (mija)</a></td>
                 <td class="nhsuk-table__cell">17 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Johnson Paul (jopa)</a></td>
                 <td class="nhsuk-table__cell">18 May 2025</td>
-               <td class="nhsuk-table__cell"></td>
+               <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -206,11 +215,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Ben Rowley (bero)</a></td>
                 <td class="nhsuk-table__cell">18 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
@@ -218,11 +228,12 @@ Prescription Processing Training Package
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">James Bond (jabo)</a></td>
                 <td class="nhsuk-table__cell">18 May 2025</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
                 <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
-                <td class="nhsuk-table__cell">104</td>
-                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell">212</td>
+                <td class="nhsuk-table__cell"><a href="">Leave feedback</a></td>
                 </td>
                 </tr>
 
