@@ -21,7 +21,7 @@ Prescription Processing Training Package
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
    
   </ol>
@@ -32,6 +32,8 @@ Prescription Processing Training Package
     </a>
   </p>
 </nav>
+
+
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -53,12 +55,12 @@ Prescription Processing Training Package
 
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl">Error frequency report</h1>
+      <h1 class="nhsuk-heading-xl">User activities and audit history</h1>
 
-        <p class="nhsuk-body">Enter the date range, trainee name and select a training group to export the correct report.</p>
+        <p class="nhsuk-body">Implement an audit trail or version history feature to track changes made to model answers.</p>
 
         <!--Fieldset 1-->  
-          <div class="nhsuk-form-group">
+       <div class="nhsuk-form-group">
 
   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
     <legend class="nhsuk-fieldset__legend nhsuk-label--m">
@@ -134,68 +136,13 @@ Prescription Processing Training Package
         </fieldset>
         </div>
 
-      
 
-        <!--Fieldset 2-->
-       
-         <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="autocomplete-input">
-                   Trainee name
-                  </label>
-                   <div class="nhsuk-hint" id="contact-hint">
-                Choose one to enter. Either trainee name or select a training group
-                </div>
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text" autocomplete="off" list="manager" >
-                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
-                </div>
-                <datalist id="manager">
-                  <option value="Michael Roberts (Mirob)"></option>
-                  <option value="Matthew John (majoh)"></option>
-                  <option value="Martin Lewis (Malew)"></option>
-                  <option value="Melissa Carter (Mecar)"></option>
-                </datalist>
+<br> 
 
-        <!--Fieldset 3-->
-      <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="autocomplete-input">
-                    Training group
-                  </label>
-                  <div class="nhsuk-hint" id="example-with-hint-text-hint">
-                    Enter the group number
-  </div>
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="number" autocomplete="off" list="Group" >
-                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
-                </div>
-                <datalist id="Group">
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                  <option value="4"></option>
-                  <option value="5"></option>
-                </datalist>
-
-<br>
-
-<a href="error-frequency-report-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-  Export
+<a href="user-activities-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Export audit history
 </a>
 
-
-<br>
-<br>
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Error example
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p class="nhsuk-body">If user enter trainee name and training group together within the same export.
-      <a href="error-frequency-report-error">Show error message</a>
-    </p>
-
-  </div>
-</details>
       <!-- End of content -->
 
     </div>

@@ -57,7 +57,7 @@ Prescription Processing Training Package
      
       <h1 class="nhsuk-heading-xl">Trainee tracker</h1>
 
-        <p class="nhsuk-body">Search with date range, trainee, group and manager to download excel.</p>
+        <p class="nhsuk-body">Search with date range, trainee, group and manager to export excel.</p>
 
         <!--Fieldset 1-->  
        <div class="nhsuk-form-group">
@@ -115,19 +115,23 @@ Prescription Processing Training Package
                 </datalist>
 
         <!--Fieldset 3-->
-        <div class="nhsuk-form-group" >
-            <label class="nhsuk-label" for="select-1">
-              Select a training group
-            </label>
-            <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
-              <option value="select a group"selected>All groups</option>
-              <option value="1">Group 1</option>
-               <option value="2">Group 2</option>
-              <option value="3">Group 3</option>
-              <option value="4">Group 4</option>
-              <option value="5">Group 5</option>
-            </select>
-        </div>
+        <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                    Training group
+                  </label>
+                  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+  </div>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="text" autocomplete="off" list="Group" value="All groups">
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="Group">
+                   <option value="All groups"></option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                  <option value="4"></option>
+                  <option value="5"></option>
+                </datalist>
 
         <!--Fieldset 4-->
         <div class="nhsuk-form-group" >

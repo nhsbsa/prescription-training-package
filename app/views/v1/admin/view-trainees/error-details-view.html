@@ -24,15 +24,17 @@ Prescription Processing Training Package
       <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
     </li>
     <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="checks-to-complete">Checks to complete</a>
+      <a class="nhsuk-breadcrumb__link" href="list-trainees">List of trainees</a>
     </li>
-     <li class="nhsuk-breadcrumb__item">
-      <a class="nhsuk-breadcrumb__link" href="review-history">Review history</a>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="view-trainee">Trainee profile</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="view-error-list">Quality check</a>
     </li>
     <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
-
-  <p class="nhsuk-breadcrumb__back">
+    <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
       Dashboard
@@ -51,7 +53,7 @@ Prescription Processing Training Package
 {% block content %}
 
 <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Error review of John Philips (Jophi)</h1>
-<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Completed on 25 March 2025 10:23am</p>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Completed on 22 May 2025 10:23am</p>
 
 <br>
 
@@ -65,6 +67,7 @@ Prescription Processing Training Package
     <!-- Item 1 Section -->
     <h2 class="nhsuk-heading-m">Item 1</h2>
     
+     
    <dl class="nhsuk-summary-list">
 
       <div class="nhsuk-summary-list__row">
@@ -136,126 +139,25 @@ Prescription Processing Training Package
       </div>
     </dl>
 
+
+  
+    <!-- Error code -->
+    <h3 class="nhsuk-heading-s">Error code</h3>
+    <p>Incorrect drug keyed (A1)</p>
   </div>
 </div>
 
 
 <br>
-<br>
-
- <!-- Error code -->
-    <h2 class="nhsuk-heading-m">Add error code</h2>
-    <div>
-        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="status" name="status" type="text" aria-describedby="status" inputmode="numeric" style="width: 470px;" disabled>
-            <option value="Select">Select an error code</option>
-          <option value="A1" selected>Incorrect drug keyed (A1)</option>
-            <option value="A2">Incorrect drug confirmed (A2)</option>
-            <option value="B1">Incorrect appliance keyed (B1)</option>
-            <option value="B2">Incorrect appliance confirmed (B2)</option>
-             <option value="C1">Incorrect strength keyed (C1)</option>
-        </select>
-    </div>
-
-<br>
-<br>  
-
- <!-- Comment -->
-<h2 class="nhsuk-heading-m">Comment</h2>
-
-<textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
-
-<br>
-<br>
-
-<!-- Radios 1 -->
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset"disabled>
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-      Is the master data incorrect?
-    </legend>
-    <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional">
-      <!-- Yes with conditional radios -->
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input"
-               id="example-inline-1"
-               name="example-inline"
-               type="radio"
-               value="yes"
-               aria-controls="conditional-example-inline-1"
-               aria-expanded="false">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">Yes</label>
-      </div>
-      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-example-inline-1">
-        <h3 class="nhsuk-heading-s" style="margin-bottom: 8px; display: inline-block;">
-          Is the trainee's input correct?
-        </h3>
-        <div class="nhsuk-radios nhsuk-radios--inline">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-inline-reason-1" name="example-inline-reason" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-1">Yes</label>
-          </div>
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-inline-reason-2" name="example-inline-reason" type="radio" value="no" >
-            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-2">No</label>
-          </div>
-        </div>
-      </div>
-      <!-- No -->
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input"
-               id="example-inline-2"
-               name="example-inline"
-               type="radio"
-               value="no"checked>
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">No</label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-<!-- Radios 1 ends here-->
-
-<br>
-
-<form method="post" action="questionremove">
-<!-- Radios 2 -->
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset" disabled>
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-      <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
-        Do you want to remove answer from pool
-      </h3>
-    </legend>
-    <div class="nhsuk-radios">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-3" name="questionremove" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
-          Yes
-        </label>
-      </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-4" name="questionremove" type="radio" value="no" >
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
 
 
-<br>
- <a href="tms-data-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Update this page
-        </a>
-
-</form>
 
 <!--pagination-->
 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
   <ul class="nhsuk-list nhsuk-pagination__list">
- 
+   
     <li class="nhsuk-pagination-item--next">
-      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="error-review-2">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="error-details-2">
         <span class="nhsuk-pagination__title">Next</span>
         <span class="nhsuk-u-visually-hidden">:</span>
         <span class="nhsuk-pagination__page">Page 2 of 50</span>
