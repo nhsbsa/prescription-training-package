@@ -35,6 +35,25 @@ router.post(/questionremove/, (req, res) => {
   }
 });
 
+router.post(/continueerrror/, (req, res) => {
+  const { continueerrror } = req.session.data;
+  if (continueerrror === 'yes') {
+    res.redirect('remove-answer-pool');
+  } else {
+    res.redirect('error-review-3');
+  }
+});
+
+router.post(/errorcomplete/, (req, res) => {
+  const { errorcomplete } = req.session.data;
+  if (errorcomplete === 'yes') {
+    res.redirect('remove-answer-pool');
+  } else {
+    res.redirect('confirmation-error-review');
+  }
+});
+
+
 // trainee //
 router.post(/signout/, (req, res) => {
   const { signout } = req.session.data;
