@@ -61,6 +61,7 @@ Prescription Processing Training Package
     <!-- Item 1 Section -->
     <h2 class="nhsuk-heading-m">Item 1</h2>
     
+     
    <dl class="nhsuk-summary-list">
 
       <div class="nhsuk-summary-list__row">
@@ -132,28 +133,16 @@ Prescription Processing Training Package
       </div>
     </dl>
 
+
+  
+    <!-- Error code -->
+    <h3 class="nhsuk-heading-s">Error code</h3>
+    <p>Incorrect drug keyed (A1)</p>
   </div>
 </div>
 
 
 <br>
-<br>
-
- <!-- Error code -->
-    <h2 class="nhsuk-heading-m">Add error code</h2>
-    <div>
-        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="status" name="status" type="text" aria-describedby="status" inputmode="numeric" style="width: 470px;" disabled>
-            <option value="Select">Select an error code</option>
-          <option value="A1" selected>Incorrect drug keyed (A1)</option>
-            <option value="A2">Incorrect drug confirmed (A2)</option>
-            <option value="B1">Incorrect appliance keyed (B1)</option>
-            <option value="B2">Incorrect appliance confirmed (B2)</option>
-             <option value="C1">Incorrect strength keyed (C1)</option>
-        </select>
-    </div>
-
-<br>
-<br>  
 
  <!-- Comment -->
 <h2 class="nhsuk-heading-m">Comment</h2>
@@ -163,13 +152,34 @@ Prescription Processing Training Package
 <br>
 <br>
 
+
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Problem with master data and pool
+    </span>
+  </summary>
+   <div class="nhsuk-details__text">
+
 <!-- Radios 1 -->
 <div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset"disabled>
+  <fieldset class="nhsuk-fieldset" disabled>
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-      Is the master data incorrect?
+      Is the master data correct?
     </legend>
+
     <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional">
+      
+       <!-- No -->
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input"
+               id="example-inline-2"
+               name="example-inline"
+               type="radio"
+               value="yes" checked >
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">Yes</label>
+      </div>
+
       <!-- Yes with conditional radios -->
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input"
@@ -179,7 +189,7 @@ Prescription Processing Training Package
                value="yes"
                aria-controls="conditional-example-inline-1"
                aria-expanded="false">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">Yes</label>
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">No</label>
       </div>
       <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-example-inline-1">
         <h3 class="nhsuk-heading-s" style="margin-bottom: 8px; display: inline-block;">
@@ -191,60 +201,20 @@ Prescription Processing Training Package
             <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-1">Yes</label>
           </div>
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-inline-reason-2" name="example-inline-reason" type="radio" value="no" >
+            <input class="nhsuk-radios__input" id="example-inline-reason-2" name="example-inline-reason" type="radio" value="no">
             <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-2">No</label>
           </div>
         </div>
       </div>
-      <!-- No -->
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input"
-               id="example-inline-2"
-               name="example-inline"
-               type="radio"
-               value="no"checked>
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">No</label>
-      </div>
+     
     </div>
   </fieldset>
 </div>
 <!-- Radios 1 ends here-->
 
-<br>
 
-<form method="post" action="questionremove">
-<!-- Radios 2 -->
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset" disabled>
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-      <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
-        Do you want to remove answer from pool
-      </h3>
-    </legend>
-    <div class="nhsuk-radios">
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-3" name="questionremove" type="radio" value="yes">
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
-          Yes
-        </label>
-      </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="example-inline-4" name="questionremove" type="radio" value="no" checked>
-        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-
-<br>
- <!--a href="error-review-view-edit" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Edit this page
-        </a>
-
-</form-->
+  </div>
+</details>
 
 <!--pagination-->
 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">

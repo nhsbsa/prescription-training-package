@@ -206,8 +206,9 @@ Prescription Processing Training Package
                aria-expanded="false">
         <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">No</label>
       </div>
+      
       <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-example-inline-1">
-        <h3 class="nhsuk-heading-s" style="margin-bottom: 8px; display: inline-block;">
+         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
           Is the trainee's input correct?
         </h3>
         <div class="nhsuk-radios nhsuk-radios--inline">
@@ -220,22 +221,17 @@ Prescription Processing Training Package
             <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-2">No</label>
           </div>
         </div>
-      </div>
-     
-    </div>
-  </fieldset>
-</div>
-<!-- Radios 1 ends here-->
 
-<br>
-
+        <br>
+          <!-- Yes with conditional radios -->
+           
 <form method="post" action="continueerrror">
-<!-- Radios 2 -->
+
 <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
       <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
-        Do you want to remove answer from pool
+        Do you want to remove answer from pool?
       </h3>
     </legend>
     <div class="nhsuk-radios">
@@ -255,11 +251,20 @@ Prescription Processing Training Package
   </fieldset>
 </div>
 
+      </div>
+     
+      
+      
+    </div>
+  </fieldset>
+</div>
+<!-- Radios 1 ends here-->
 
   </div>
 </details>
 
 <br>
+
  <button class="nhsuk-button" type="submit">Save and continue</button>
 
 </form>
