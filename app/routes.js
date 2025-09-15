@@ -53,7 +53,6 @@ router.post(/errorcomplete/, (req, res) => {
   }
 });
 
-
 // trainee //
 router.post(/signout/, (req, res) => {
   const { signout } = req.session.data;
