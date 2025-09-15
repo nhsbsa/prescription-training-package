@@ -139,8 +139,82 @@ Prescription Processing Training Package
 
 <br>
 
+ <!-- Comment -->
+<h2 class="nhsuk-heading-m">Comment</h2>
 
- <h3 class="nhsuk-heading-s">Feedback</h3> 
+<textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+
+<br>
+<br>
+
+
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Problem with master data and pool
+    </span>
+  </summary>
+   <div class="nhsuk-details__text">
+
+<!-- Radios 1 -->
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" disabled>
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+      Is the master data correct?
+    </legend>
+
+    <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional">
+      
+       <!-- No -->
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input"
+               id="example-inline-2"
+               name="example-inline"
+               type="radio"
+               value="yes" checked >
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">Yes</label>
+      </div>
+
+      <!-- Yes with conditional radios -->
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input"
+               id="example-inline-1"
+               name="example-inline"
+               type="radio"
+               value="yes"
+               aria-controls="conditional-example-inline-1"
+               aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">No</label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-example-inline-1">
+        <h3 class="nhsuk-heading-s" style="margin-bottom: 8px; display: inline-block;">
+          Is the trainee's input correct?
+        </h3>
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-reason-1" name="example-inline-reason" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-1">Yes</label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-reason-2" name="example-inline-reason" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-2">No</label>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+<!-- Radios 1 ends here-->
+
+
+  </div>
+</details>
+
+<br>
+
+
+ <h2 class="nhsuk-heading-m">Feedback</h2> 
  <p class="nhsuk-body">You can provide feedback on the entire batch of errors that occurred on 23 May 2025.</p>
 
 <a class="nhsuk-button" href="leave-feedback">Leave feedback</a>
