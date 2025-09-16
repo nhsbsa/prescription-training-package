@@ -1,0 +1,17 @@
+Week,Group,trainee name,trainee cipher,Check Date,Checkers name,Checkers cipher,Feedback given y/n,Manager ,Total processed,Paper Volume,Paper errors,Result of paper,% of paper checked,EPS Volume,EPS errors,Result of EPS,% of EPS checked,Total Items checked,Number of errors,Result of check,trainee minutes processing,Quality Time (mins),Feedback (mins)
+6,1,joe bloggs,JOBLO,4/1/2025,VICKY BAILEY,VIBAI,Y,Sophia Leyland,1000,600,10,98.33%,60%,400,20,95%,40%,1000,30,97%,,120,30
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+only errors where the code has been input by the checker will be within the report,,,,,,,,,,,,,,,,,,,,,,,
+,error code & volume,,,,,,,,,,,,,,,,,,,,,,
+field error created,1a,1b,2a,3k,,,,,,,,,,,,,,,,,,,
+code,5,1,,,,,,,,,,,,,,,,,,,,,
+quantity,,,2,,,,,,,,,,,,,,,,,,,,
+endorsement,,,,5,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+error codes within each field,,,,,,,,,,,,,,,,,,,,,,,
+code errors 1a-1m,,,,,,,,,,,,,,,,,,,,,,,
+quantity errors 2a-2e,,,,,,,,,,,,,,,,,,,,,,,
+endorsement errors 3a-3k,,,,,,,,,,,,,,,,,,,,,,,
