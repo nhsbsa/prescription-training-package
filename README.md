@@ -1,6 +1,6 @@
 # NHS prototype kit
 
-Visit the <a href="https://prototype-kit.service-manual.nhs.uk">NHS prototype kit site</a> to download the latest version and read the documentation.
+Visit the <a href="https://prototype-kit.service-manual.nhs.uk">NHS prototype kit site</a> to export the latest version and read the documentation.
 
 ## About the NHS prototype kit
 
@@ -53,7 +53,7 @@ Run unit tests locally with `npm run test`.
 
 - Open a new pull request which changes the version number in `package.json` and `package-lock.json` and which updates the 'Unreleased' header in the `CHANGELOG.md` to the new version number and release date. Merge this into `main`.
 - Visit the [Create a new release page](https://github.com/nhsuk/nhsuk-prototype-kit/releases/new) on GitHub. In the 'Choose a tag' dropdown, create a new tag for the new version number, prefixed with a `v`. Use the same format for the release title. You can use the 'Generate release notes' feature to generate some initial release notes, and then edit these as needed. Make sure the "Set as latest release" checkbox is checked. Publish the release (or save as draft if you’re not ready).
-- Update the `prototypeKitVersion` value in [the `package.json` of the prototype kit website](https://github.com/nhsuk/nhsuk.service-manual.prototype-kit.docs/blob/main/package.json#L4) - this will update the 'Download' link to point to the new zip file.
+- Update the `prototypeKitVersion` value in [the `package.json` of the prototype kit website](https://github.com/nhsuk/nhsuk.service-manual.prototype-kit.docs/blob/main/package.json#L4) - this will update the 'export' link to point to the new zip file.
 - Add some details about the new release to the [What’s new page](https://github.com/nhsuk/nhsuk.service-manual.prototype-kit.docs/blob/main/app/views/whats-new/updates.html) on the prototype kit website
 - Announce the new release on the Service Manual Slack, NHS England Slack, and any other appropriate locations
 

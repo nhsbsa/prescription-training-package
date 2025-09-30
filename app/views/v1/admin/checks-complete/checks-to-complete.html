@@ -51,11 +51,47 @@ Prescription Processing Training Package
 
 
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
-      <h1 class="nhsuk-heading-xl">Checks to complete (Total of 45)</h1>
+     
+      <h1 class="nhsuk-heading-xl">Checks to complete</h1>
 
-            <!-- Date input fields for month and year -->                
-<br>
+      <p class="nhsuk-body"><a href="review-history">Access your review history here</a> </p>
+
+<!-- Filter & Go Button -->
+  <div style="display: flex; align-items: flex-end; gap: 1rem;">
+    <!-- Dropdown -->
+    <div>
+      <label class="nhsuk-label" for="select-1">Filter by status</label>
+      <select
+        class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
+        id="select-1"
+        name="select-1"
+      >
+                        <option value="checks-to-complete" selected>Error review queue</option>
+                            <option value="awaiting-feedback">Awaiting feedback</option>
+      </select>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <button class="nhsuk-button" onclick="goToSelectedPage()">Search</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function goToSelectedPage() {
+    const select = document.getElementById("select-1");
+    const selectedValue = select.value;
+    window.location = selectedValue;
+  }
+</script>
+</div>
+
+
+  <div class="nhsuk-u-padding-bottom-8"></div>
+
+  <h3 class="nhsuk-heading-s">Error review queue (62)</h3>
+
           <table class="nhsuk-table">
             <thead class="nhsuk-table__head">
                 <tr>
@@ -63,11 +99,9 @@ Prescription Processing Training Package
                 <th scope="col" class="nhsuk-table__header">Date</th>
                 <th scope="col" class="nhsuk-table__header">Latest checker</th>
                 <th scope="col" class="nhsuk-table__header">Volume processed</th>
-                <th scope="col" class="nhsuk-table__header">Total error mismatched</th>
+                <th scope="col" class="nhsuk-table__header">Total errors</th>
                 <th scope="col" class="nhsuk-table__header">Errors reviewed</th>
-                <th scope="col" class="nhsuk-table__header">Total minutes trainee</th>
-                <th scope="col" class="nhsuk-table__header">Feedback given</th>
-                <th scope="col" class="nhsuk-table__header">Actions</th>
+                <th scope="col" class="nhsuk-table__header">Total review time</th>
                 </tr>
             </thead>
             <tbody class="nhsuk-table__body">
@@ -75,13 +109,10 @@ Prescription Processing Training Package
                 <td class="nhsuk-table__cell"><a href="error-review">John Philips (Jophi)</a></td>
                 <td class="nhsuk-table__cell">15 May 2025</td>
                 <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">130</td>
+                <td class="nhsuk-table__cell">80</td>
+                <td class="nhsuk-table__cell">212</td>
                 </td>
                 </tr>
 
@@ -90,132 +121,105 @@ Prescription Processing Training Package
                 <td class="nhsuk-table__cell"><a href="">John Smith (josmi)</a></td>
                 <td class="nhsuk-table__cell">15 May 2025</td>
                 <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">87</td>
+                <td class="nhsuk-table__cell">58</td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">George Paul (gepl)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
+                <td class="nhsuk-table__cell">16 May 2025</td>
                 <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">59</td>
+                <td class="nhsuk-table__cell">53</td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Peter Paul (pepl)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
+                <td class="nhsuk-table__cell">16 May 2025</td>
                 <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">67</td>
+                <td class="nhsuk-table__cell">55</td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Daniel Miller (damil)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">16 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Micheal John (mijo)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">17 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Micheal Jackson (mija)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">17 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Johnson Paul (jopa)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">18 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">Ben Rowley (bero)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">18 May 2025</td>
+               <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
 
                 <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><a href="#">James Bond (jabo)</a></td>
-                <td class="nhsuk-table__cell">15 May 2025</td>
-                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">50</td>
-                <td class="nhsuk-table__cell">Yes</td>
-                <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link" href="#">Download</a>
+                <td class="nhsuk-table__cell">18 May 2025</td>
+               <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
                 </td>
                 </tr>
 
@@ -242,7 +246,7 @@ Prescription Processing Training Package
 
 
      
- <a href="#" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+ <a href="/images/Checks to complete(Sheet1).csv" download class="nhsuk-button" data-module="nhsuk-button" type="submit">
   Export as CSV
 </a>
       <!-- End of content -->

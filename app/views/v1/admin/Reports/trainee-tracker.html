@@ -54,10 +54,10 @@ Prescription Processing Training Package
 
 
       <!-- Change the page title here -->
-      <span class="nhsuk-caption-xl">Prescription Processing Training Package</span>
+     
       <h1 class="nhsuk-heading-xl">Trainee tracker</h1>
 
-        <p class="nhsuk-body">Search with date range, trainee, group and manager to download excel.</p>
+        <p class="nhsuk-body">Search with date range, trainee, group and manager to export excel.</p>
 
         <!--Fieldset 1-->  
        <div class="nhsuk-form-group">
@@ -100,7 +100,7 @@ Prescription Processing Training Package
      
          <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="autocomplete-input">
-                   Manager
+                   Manager (Optional)
                   </label>
                   <div class="nhsuk-hint" id="example-with-hint-text-hint">
   </div>
@@ -115,33 +115,31 @@ Prescription Processing Training Package
                 </datalist>
 
         <!--Fieldset 3-->
-        <div class="nhsuk-form-group" >
-            <label class="nhsuk-label" for="select-1">
-              Select a training group
-            </label>
-                <div class="nhsuk-hint" id="contact-hint">
-                Select all trainee, a group or type a specific trainee
+        <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                    Training group
+                  </label>
+                  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+  </div>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="text" autocomplete="off" list="Group" value="All groups">
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
-            <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
-              <option value="select a group"selected>Select a group</option>
-              <option value="1">Group 1</option>
-               <option value="2">Group 2</option>
-              <option value="3">Group 3</option>
-              <option value="4">Group 4</option>
-              <option value="5">Group 5</option>
-            </select>
-        </div>
+                <datalist id="Group">
+                   <option value="All groups"></option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                  <option value="4"></option>
+                  <option value="5"></option>
+                </datalist>
 
         <!--Fieldset 4-->
         <div class="nhsuk-form-group" >
             <label class="nhsuk-label" for="select-1">
               Status
             </label>
-                <div class="nhsuk-hint" id="contact-hint">
-                Select Ongoing, Successful, Unsuccessful, Cancelled
-                </div>
             <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
-              <option value="select a status"selected>Select a status</option>
+              <option value="select a status"selected>All status</option>
               <option value="1">Ongoing</option>
                <option value="2">Successful</option>
               <option value="3">Unsuccessful</option>

@@ -231,7 +231,7 @@ Node 16.x recently became the long term supported version of Nodejs. The `gulp-s
 
 :wrench: **Fixes**
 
-- Update download link for the prototype-kit to use the latest release instead of the master branch
+- Update export link for the prototype-kit to use the latest release instead of the master branch
 
 ## 4.7.0 - 22 September 2021
 
