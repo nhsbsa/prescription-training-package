@@ -1,0 +1,115 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="list-trainees">View trainees</a></li>
+
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      My dashboard
+    </a>
+  </p>
+</nav>
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+     
+      <h1 class="nhsuk-heading-xl">Trainee profile</h1>
+
+
+
+        <dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+    James Jacob (jajac)
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Start date
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+    
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Manager
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Training group
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+   
+    </dd>
+  </div>
+    <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+     Status
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <strong class="nhsuk-tag nhsuk-tag--green">New</strong>
+    </dd>
+  </div>
+</dl>
+
+<!--a href="view-error-list" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+    View quality check 
+</a-->
+
+<a href="edit-trainee-new" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+  Edit information
+</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

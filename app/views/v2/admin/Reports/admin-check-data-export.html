@@ -1,0 +1,58 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- Expected input -->
+
+<br>
+
+    <div class="nhsuk-panel">
+    <h1 class="nhsuk-panel__title">
+        Report is now available to export
+    </h1>
+    </div>
+
+<br>
+<p>You can now <a href="/images/Admin check data - Performance Excel for checkers(Individual_daily).csv" download>export the report</a> here.</p>
+
+<br>
+
+
+<p><a href="admin-check-data">Back to admin check data</a></p>
+
+<p><a href="reports">Back to reports dashboard</a></p>
+
+
+
+{% endblock %}

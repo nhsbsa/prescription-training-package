@@ -1,0 +1,256 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+   
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      My dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+     
+      <h1 class="nhsuk-heading-xl">Checks to complete</h1>
+
+      <p class="nhsuk-body"><a href="review-history">Your review history</a> </p>
+
+<!-- Filter & Go Button -->
+  <div style="display: flex; align-items: flex-end; gap: 1rem;">
+    <!-- Dropdown -->
+    <div>
+      <label class="nhsuk-label" for="select-1">Filter by status</label>
+      <select
+        class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
+        id="select-1"
+        name="select-1"
+      >
+                        <option value="checks-to-complete" selected>Error review queue</option>
+                            <option value="awaiting-feedback">Awaiting feedback</option>
+      </select>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <button class="nhsuk-button" onclick="goToSelectedPage()">Search</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function goToSelectedPage() {
+    const select = document.getElementById("select-1");
+    const selectedValue = select.value;
+    window.location = selectedValue;
+  }
+</script>
+</div>
+
+
+  <div class="nhsuk-u-padding-bottom-8"></div>
+
+  <h3 class="nhsuk-heading-s">Error review queue (62)</h3>
+
+          <table class="nhsuk-table">
+            <thead class="nhsuk-table__head">
+                <tr>
+                <th scope="col" class="nhsuk-table__header">Trainee name</th>
+                <th scope="col" class="nhsuk-table__header">Date</th>
+                <th scope="col" class="nhsuk-table__header">Latest checker</th>
+                <th scope="col" class="nhsuk-table__header">Prescriptions processed</th>
+                <th scope="col" class="nhsuk-table__header">Total errors</th>
+                <th scope="col" class="nhsuk-table__header">Errors reviewed</th>
+                <th scope="col" class="nhsuk-table__header">Total processing time</th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="error-review">John Philips (Jophi)</a></td>
+                <td class="nhsuk-table__cell">15 May 2025</td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">130</td>
+                <td class="nhsuk-table__cell">80</td>
+                <td class="nhsuk-table__cell">212</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="">John Smith (josmi)</a></td>
+                <td class="nhsuk-table__cell">15 May 2025</td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">87</td>
+                <td class="nhsuk-table__cell">58</td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">George Paul (gepl)</a></td>
+                <td class="nhsuk-table__cell">16 May 2025</td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">59</td>
+                <td class="nhsuk-table__cell">53</td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">Peter Paul (pepl)</a></td>
+                <td class="nhsuk-table__cell">16 May 2025</td>
+                <td class="nhsuk-table__cell">Amy Johnson (amjo)</td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">67</td>
+                <td class="nhsuk-table__cell">55</td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">Daniel Miller (damil)</a></td>
+                <td class="nhsuk-table__cell">16 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">Micheal John (mijo)</a></td>
+                <td class="nhsuk-table__cell">17 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">Micheal Jackson (mija)</a></td>
+                <td class="nhsuk-table__cell">17 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">Johnson Paul (jopa)</a></td>
+                <td class="nhsuk-table__cell">18 May 2025</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">Ben Rowley (bero)</a></td>
+                <td class="nhsuk-table__cell">18 May 2025</td>
+               <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">James Bond (jabo)</a></td>
+                <td class="nhsuk-table__cell">18 May 2025</td>
+               <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">30</td>
+                <td class="nhsuk-table__cell"></td>
+                <td class="nhsuk-table__cell">104</td>
+                </td>
+                </tr>
+
+
+            </tbody>
+          </table>
+
+
+<!--pagination-->
+<nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+  <ul class="nhsuk-list nhsuk-pagination__list">
+    <li class="nhsuk-pagination-item--next">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+        <span class="nhsuk-pagination__title">Next</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 1 of 6</span>
+        <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+          <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+     
+ <a href="/images/Checks to complete(Sheet1).csv" download class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Export as CSV
+</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

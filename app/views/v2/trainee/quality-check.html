@@ -1,0 +1,105 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="dashboard">Dashboard</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-xl">My quality check</h1>
+
+ <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Select a date range
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
+              <option value="1">Select a date range</option>
+               <option value="2" selected>19 May 2025 to 23 May 2025 (week 4)</option>
+              <option value="3">12 May 2025 to 16 May 2025 (week 3)</option>
+              <option value="4">05 May 2025 to 09 May 2025 (week 2)</option>
+              <option value="5">28 April 2025 to 02 May 2025 (week 1)</option>
+            </select>
+
+            <button class="nhsuk-button nhsuk-u-padding-bottom-1 nhsuk-u-padding-top-2 nhsuk-u-margin-bottom-4 nhsuk-u-margin-left-2" data-module="nhsuk-button" type="submit">
+            Change
+            </button>
+          </div>
+
+
+          <table class="nhsuk-table">
+            <thead class="nhsuk-table__head">
+                <tr>
+                <th scope="col" class="nhsuk-table__header">Date</th>
+                <th scope="col" class="nhsuk-table__header">Number of errors</th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="error-details">23 May 2025</a></td>
+                <td class="nhsuk-table__cell">11</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="">22 May 2025</a></td>
+                <td class="nhsuk-table__cell">9</td>
+                </tr>
+                  <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="">21 May 2025</a></td>
+                <td class="nhsuk-table__cell">9</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">20 May 2025</a></td>
+                <td class="nhsuk-table__cell">7</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="#">19 May 2025</a></td>
+                <td class="nhsuk-table__cell">23</td>
+                </tr>
+            </tbody>
+          </table>
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

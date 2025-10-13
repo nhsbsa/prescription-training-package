@@ -1,0 +1,200 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
+   
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+     
+      <h1 class="nhsuk-heading-xl">Trainee tracker</h1>
+
+        <p class="nhsuk-body">Search with date range, trainee, group and manager to export excel.</p>
+
+        <!--Fieldset Date range 1-->  
+       <div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+    
+      <label class="nhsuk-label">
+        From date
+      </label>
+      <div class="nhsuk-hint" id="example-hint">
+      For example, 15 3 2025
+    </div>
+    <div class="nhsuk-date-input" id="example">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+            Day
+          </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric" value="" >
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+            Month
+          </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="" >
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+            Year
+          </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric" value="" >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+      </div>
+
+        <!--Fieldset Date range 2-->  
+       <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+        
+          <label class="nhsuk-label">
+            To date
+          </label>
+          <div class="nhsuk-hint" id="example-hint">
+          For example, 30 3 2025
+        </div>
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                Day
+              </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric" value="" >
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                Month
+              </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="" >
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                Year
+              </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric" value="" >
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      </div>
+
+        <!--Fieldset 2-->
+     
+         <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                   Manager (Optional)
+                  </label>
+                  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+  </div>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="manager" type="text" autocomplete="off" list="manager" >
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="manager">
+                  <option value="Michael Roberts (Mirob)"></option>
+                  <option value="Matthew John (majoh)"></option>
+                  <option value="Martin Lewis (Malew)"></option>
+                  <option value="Melissa Carter (Mecar)"></option>
+                </datalist>
+
+        <!--Fieldset 3-->
+        <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                    Training group
+                  </label>
+                  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+  </div>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="text" autocomplete="off" list="Group" value="All groups">
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="Group">
+                   <option value="All groups"></option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                  <option value="4"></option>
+                  <option value="5"></option>
+                </datalist>
+
+        <!--Fieldset 4-->
+        <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Status
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
+              <option value="select a status"selected>All status</option>
+              <option value="1">New</option>
+               <option value="2">Ongoing</option>
+              <option value="3">Removed</option>
+            </select>
+        </div>
+
+<br>
+
+<a href="trainee-tracker-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Export
+</a>
+<a href="trainee-tracker-export" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+  Export all trainees
+</a>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

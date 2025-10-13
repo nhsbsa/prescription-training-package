@@ -1,0 +1,285 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a>
+    </li>
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="checks-to-complete">Checks to complete</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Error review of John Philips (Jophi)</h1>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Completed on 15 May 2025 10:23am</p>
+
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+    <!-- Image / Prescription scan -->  
+            <img class="nhsuk-image__img" src="/images/image_png.png" alt="precription form.">       
+  </div>
+
+  <div class="nhsuk-grid-column-one-half">
+    <!-- Item 1 Section -->
+    <h2 class="nhsuk-heading-m">Data stream - Item 1</h2>
+    
+   <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Product
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        <span class="warning-icon" aria-hidden="true" style="
+        display: inline-flex;
+        align-items: center;
+        background-color: #000000;
+        color: #ffffff;
+        border-radius: 50%;
+        width: 1.2em;
+        height: 1.2em;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 0.4em;
+        font-size: 1.2em;
+        "aria-hidden="true">!</span>
+        <span class="nhsuk-u-visually-hidden">Warning</span>
+          91776 - Biotene moisturising mouthwash 500ml
+        </dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Quantity</dt>
+        <dd class="nhsuk-summary-list__value">1</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" style="min-width: 220px; width: 20%;">
+          Add info
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+        <span class="warning-icon" aria-hidden="true" style="
+        display: inline-flex;
+        align-items: center;
+        background-color: #000000;
+        color: #ffffff;
+        border-radius: 50%;
+        width: 1.2em;
+        height: 1.2em;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 0.4em;
+        font-size: 1.2em;
+        "aria-hidden="true">!</span>
+        <span class="nhsuk-u-visually-hidden">Warning</span>-</dd>
+      </div>
+
+    </dl>
+    
+
+    <!-- Expected input -->
+    <h3 class="nhsuk-heading-s">Expected input</h3>
+    <dl class="nhsuk-summary-list">
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Product</dt>
+        <dd class="nhsuk-summary-list__value">64750 - Biotene Oralbalance dry mouth saliva replacement gel 50g</dd>
+      </div>
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Qty</dt>
+        <dd class="nhsuk-summary-list__value">1</dd>
+      </div>
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Add. Info</dt>
+        <dd class="nhsuk-summary-list__value">ND</dd>
+      </div>
+    </dl>
+
+  </div>
+</div>
+
+
+<br>
+<br>
+
+ <!-- Error code -->
+    <h2 class="nhsuk-heading-m">Add error code</h2>
+    <div>
+      <label class="nhsuk-label" for="status"><span class="nhsuk-u-visually-hidden">Add error code</span></label>
+        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="status" name="status" type="text" inputmode="numeric" style="width: 470px;">
+            <option value="Select">Select an error code</option>
+          <option value="A1">Incorrect drug keyed (A1)</option>
+            <option value="A2">Incorrect drug confirmed (A2)</option>
+            <option value="B1">Incorrect appliance keyed (B1)</option>
+            <option value="B2">Incorrect appliance confirmed (B2)</option>
+             <option value="C1">Incorrect strength keyed (C1)</option>
+        </select>
+    </div>
+
+<br>
+<br>  
+
+ <!-- Comment -->
+<h2 class="nhsuk-heading-m">Comment</h2>
+<label class="nhsuk-label" for="Comment"><span class="nhsuk-u-visually-hidden">Comment</span></label>
+<textarea class="nhsuk-textarea" id="Comment" name="Comment" rows="5" aria-describedby="Comment"></textarea>
+
+<br>
+<br>
+
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Problem with master data and pool
+    </span>
+  </summary>
+   <div class="nhsuk-details__text">
+
+<!-- Radios 1 -->
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+      Is the master data correct?
+    </legend>
+
+    <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional">
+      
+       <!-- No -->
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input"
+               id="example-inline-2"
+               name="example-inline"
+               type="radio"
+               value="yes" checked>
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">Yes</label>
+      </div>
+
+      <!-- Yes with conditional radios -->
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input"
+               id="example-inline-1"
+               name="example-inline"
+               type="radio"
+               value="yes"
+               aria-controls="conditional-example-inline-1"
+               aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">No</label>
+      </div>
+      
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-example-inline-1">
+         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          Is the trainee's input correct?
+        </h3>
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-reason-1" name="example-inline-reason" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-1">Yes</label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-inline-reason-2" name="example-inline-reason" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-reason-2">No</label>
+          </div>
+        </div>
+
+        <br>
+          <!-- Yes with conditional radios -->
+           
+<form method="post" action="questionremove">
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-1">
+        Do you want to remove answer from pool?
+      </h3>
+    </legend>
+    <div class="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-3" name="questionremove" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-3">
+          Yes
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-4" name="questionremove" type="radio" value="no"checked >
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-4">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+     
+      
+      
+    </div>
+  </fieldset>
+</div>
+<!-- Radios 1 ends here-->
+
+  </div>
+</details>
+
+<br>
+ <button class="nhsuk-button" type="submit">Save and continue</button>
+
+</form>
+
+<!--pagination-->
+<nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+  <ul class="nhsuk-list nhsuk-pagination__list">
+ 
+    <li class="nhsuk-pagination-item--next">
+      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="error-review-2">
+        <span class="nhsuk-pagination__title">Next</span>
+        <span class="nhsuk-u-visually-hidden">:</span>
+        <span class="nhsuk-pagination__page">Page 2 of 50</span>
+        <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+          <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+{% endblock %}

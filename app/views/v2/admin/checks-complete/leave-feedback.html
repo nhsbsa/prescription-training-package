@@ -1,0 +1,138 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+     
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="checks-to-complete">Checks to complete</a></li>
+     <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="error-details-2">Error review</a></li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+    <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Error review of James Jacob (jajb)</h1>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Feedback for 23 May 2025 errors</p>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+<br>
+                <h2 class="nhsuk-heading-m">Comment</h2>
+                <p class="nhsuk-body-m">Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.</p>
+
+            
+
+              <table class="nhsuk-table">
+               <tbody class="nhsuk-table__body">
+                  <tr>
+                    <th scope="col" class="nhsuk-table__header">Feedback</th>
+                     <td class="nhsuk-table__cell nhsuk-u-text-break-word">
+                        <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint" style="width: 500px;"></textarea> 
+                     </td>
+                  </tr>     
+
+                  <tr class="nhsuk-table__row">
+                    <th scope="col" class="nhsuk-table__header">Feedback method</th>
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">
+                    <select class="nhsuk-select" id="select-1" name="select-1" style="width: 500px;">
+                        <option value="1"selected>Select option</option>
+                        <option value="2"> Teams chat</option>
+                        <option value="3"> Email</option>
+                        <option value="4"> Phone call</option>
+                    </select>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word"></td>
+                  </tr>
+
+                  <tr class="nhsuk-table__row">
+                    <th scope="col" class="nhsuk-table__header">Time taken</th>                   
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">
+                    <input class="nhsuk-input nhsuk-input--width-6" id="input-width-5" name="test-width-5" type="text" style="width: 500px;">                     
+                    </td>
+                  </tr>
+
+                  <tr class="nhsuk-table__row">
+                    <th scope="col" class="nhsuk-table__header">Date</th>                   
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">
+                        
+                    <div class="nhsuk-date-input" id="example">
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                Day
+                            </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                Month
+                            </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                Year
+                            </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric">
+                            </div>
+                        </div>  
+                    </div>  
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Save and continue
+                </button> -->
+
+
+              <a href="leave-feedback-save" class="nhsuk-button">Save feedback</a>
+
+             
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
