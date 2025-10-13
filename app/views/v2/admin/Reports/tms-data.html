@@ -21,14 +21,14 @@ Prescription Processing Training Package
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
-   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
-   
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">View reports</a></li>
+
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Dashboard
+      My dashboard
     </a>
   </p>
 </nav>
@@ -53,42 +53,26 @@ Prescription Processing Training Package
 
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl">TMS data</h1>
+      <h1 class="nhsuk-heading-xl">Export TMS data</h1>
       
-        <p class="nhsuk-body">Enter trainee name to export the correct report</p>
+        <p class="nhsuk-body">Enter the search options and export TMS data as an Excel file.</p>
          <!--Fieldset 3-->
         <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="autocomplete-input">
-                    Training group
+                    Training group number
                   </label>
-                  <div class="nhsuk-hint" id="example-with-hint-text-hint">
-  </div>
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="number" autocomplete="off" list="Group" >
-                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
-                </div>
-                <datalist id="Group">
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                  <option value="4"></option>
-                  <option value="5"></option>
-                </datalist>
 
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="number">
+</div>
  <!--Fieldset 1-->
        <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="autocomplete-input">
-                   Trainee name
+                   Trainee name or cipher
                   </label>
                  
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text" autocomplete="off" list="manager" >
-                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text">
+
                 </div>
-                <datalist id="manager">
-                  <option value="Michael Roberts (Mirob)"></option>
-                  <option value="Matthew John (majoh)"></option>
-                  <option value="Martin Lewis (Malew)"></option>
-                  <option value="Melissa Carter (Mecar)"></option>
-                </datalist>
 
 
   <!--Fieldset 1-->  
