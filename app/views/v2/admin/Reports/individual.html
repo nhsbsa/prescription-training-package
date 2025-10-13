@@ -1,0 +1,158 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
+   
+  </ol>
+  <p class="nhsuk-breadcrumb__back">
+    <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
+      <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+      Dashboard
+    </a>
+  </p>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- Change the page title here -->
+     
+      <h1 class="nhsuk-heading-xl">Admin check data</h1>
+
+        <p class="nhsuk-body">Select the month, report type and enter the checker name to export the correct report</p>
+
+        <!--Fieldset 1-->  
+      <style>
+  .dropdown-row {
+    display: flex;
+    gap: 20px; /* space between dropdown groups */
+    align-items: flex-start; /* aligns labels and selects nicely */
+  }
+  .nhsuk-form-group {
+    margin: 0; /* optional: remove extra vertical margin */
+  }
+</style>
+
+<div class="dropdown-row">
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="select-1">
+      Month
+    </label>
+    <select class="nhsuk-select" id="select-1" name="select-1" style="width:100px">
+       <option value="Select"selected>Select a month</option>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6" >June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="select-2">
+      Year
+    </label>
+    <select class="nhsuk-select" id="select-2" name="select-2" style="width:100px">
+       <option value="Select"selected>Select a year</option>
+      <option value="1" >2025</option>
+      <option value="2">2026</option>
+      <option value="3">2027</option>
+      <option value="4">2028</option>
+      <option value="5">2029</option>
+    </select>
+  </div>
+</div>
+
+<br>
+        <!--Fieldset 2-->
+        <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+                Report type
+            </label>
+            <select onchange="la(this.value)" class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
+              <option value="admin-check-data">Select a report type</option>
+              <option value="Individual" selected>Individual daily summary</option>
+                <option value="monthly">Monthly summary</option>
+              <option value="total">Total daily summary</option>
+            </select>
+        </div>
+
+<br>
+        <!--Fieldset 3-->
+       <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="autocomplete-input">
+                   AAA checker name
+                  </label>
+                 
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="trainee" type="text" autocomplete="off" list="manager" >
+                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                </div>
+                <datalist id="manager">
+                  <option value="Michael Roberts (Mirob)"></option>
+                  <option value="Matthew John (majoh)"></option>
+                  <option value="Martin Lewis (Malew)"></option>
+                  <option value="Melissa Carter (Mecar)"></option>
+                </datalist>
+
+                
+                <script>
+                  function la(src)
+                  {
+                    window.location=src;
+                  }
+                </script>
+
+                <div class="nhsuk-u-padding-bottom-6"></div>
+                
+<a href="admin-check-data-export" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Export
+</a>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
