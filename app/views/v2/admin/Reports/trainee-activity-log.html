@@ -20,15 +20,14 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
-   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
-   
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">View reports</a></li>
+
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Dashboard
+      My dashboard
     </a>
   </p>
 </nav>
@@ -53,9 +52,9 @@ Prescription Processing Training Package
 
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl">Trainee activity log</h1>
+      <h1 class="nhsuk-heading-xl">Export a trainee activity log</h1>
 
-        <p class="nhsuk-body">Search with date range, trainee, group and manager to export excel.</p>
+        <p class="nhsuk-body">Enter the search options and download a trainee activity log as an Excel file.</p>
 
         <!--Date Fieldset 1-->  
         <div class="nhsuk-form-group">
@@ -63,7 +62,7 @@ Prescription Processing Training Package
   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
     
       <label class="nhsuk-label">
-        From date
+        Start of date range
       </label>
       <div class="nhsuk-hint" id="example-hint">
       For example, 15 3 2025
@@ -101,7 +100,7 @@ Prescription Processing Training Package
   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
     
       <label class="nhsuk-label">
-        To date
+        End of date range
       </label>
       <div class="nhsuk-hint" id="example-hint">
       For example, 30 3 2025
@@ -136,19 +135,13 @@ Prescription Processing Training Package
   
           <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="autocomplete-input">
-                  Trainee name
+                  Trainee name or cipher
                   </label>
                   <div class="nhsuk-hint" id="example-with-hint-text-hint">
   </div>
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="manager" type="text" autocomplete="off" list="manager" >
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="manager" type="text">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
-                <datalist id="manager">
-                  <option value="Michael Roberts (Mirob)"></option>
-                  <option value="Matthew John (majoh)"></option>
-                  <option value="Martin Lewis (Malew)"></option>
-                  <option value="Melissa Carter (Mecar)"></option>
-                </datalist>
 
               
 <br>

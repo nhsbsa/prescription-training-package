@@ -23,14 +23,14 @@ Prescription Processing Training Package
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     
-    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
-   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+   <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports">View reports</a></li>
    
   </ol>
   <p class="nhsuk-breadcrumb__back">
     <a class="nhsuk-breadcrumb__backlink" href="../dashboard">
       <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-      Dashboard
+      My dashboard
     </a>
   </p>
 </nav>
@@ -55,9 +55,9 @@ Prescription Processing Training Package
 
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl">Trainee tracker</h1>
+      <h1 class="nhsuk-heading-xl">Export trainee tracker</h1>
 
-        <p class="nhsuk-body">Search with date range, trainee, group and manager to export excel.</p>
+        <p class="nhsuk-body">Search for trainees and export an Excel file using the search options or export all trainees.</p>
 
         <!--Fieldset Date range 1-->  
        <div class="nhsuk-form-group">
@@ -65,7 +65,7 @@ Prescription Processing Training Package
   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
     
       <label class="nhsuk-label">
-        From date
+        Start of date range
       </label>
       <div class="nhsuk-hint" id="example-hint">
       For example, 15 3 2025
@@ -102,7 +102,7 @@ Prescription Processing Training Package
       <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
         
           <label class="nhsuk-label">
-            To date
+            End of date range
           </label>
           <div class="nhsuk-hint" id="example-hint">
           For example, 30 3 2025
@@ -138,19 +138,13 @@ Prescription Processing Training Package
      
          <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="autocomplete-input">
-                   Manager (Optional)
+                   Manager (optional)
                   </label>
                   <div class="nhsuk-hint" id="example-with-hint-text-hint">
   </div>
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="manager" type="text" autocomplete="off" list="manager" >
-                  <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="manager" type="text">
+                  <ul class="nhsuk-list" id="suggestions-list"></ul>
                 </div>
-                <datalist id="manager">
-                  <option value="Michael Roberts (Mirob)"></option>
-                  <option value="Matthew John (majoh)"></option>
-                  <option value="Martin Lewis (Malew)"></option>
-                  <option value="Melissa Carter (Mecar)"></option>
-                </datalist>
 
         <!--Fieldset 3-->
         <div class="nhsuk-form-group">
@@ -159,17 +153,10 @@ Prescription Processing Training Package
                   </label>
                   <div class="nhsuk-hint" id="example-with-hint-text-hint">
   </div>
-                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="text" autocomplete="off" list="Group" value="All groups">
+                  <input class="nhsuk-input nhsuk-input--width-20" id="autocomplete-input" name="Group" type="text">
                   <ul class="nhsuk-list" id="suggestions-list" hidden></ul>
                 </div>
-                <datalist id="Group">
-                   <option value="All groups"></option>
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                  <option value="4"></option>
-                  <option value="5"></option>
-                </datalist>
+
 
         <!--Fieldset 4-->
         <div class="nhsuk-form-group" >
