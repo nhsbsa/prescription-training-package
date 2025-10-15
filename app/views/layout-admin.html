@@ -76,19 +76,21 @@
 
 
 <dialog id="js-modal-dialog" data-url-redirect="https://prescription-training-ef9f5bce5db3.herokuapp.com/v2/session-timeout"
-   data-session-timeout="1200" data-session-timeout-warning="300"
-   data-session-timeout-timer-text="It appears you have been inactive for a while. <br> <br> To protect your information you will be signed out in "  data-session-timeout-timer-extra-text=""
+   data-session-timeout="50" data-session-timeout-warning="30"
+   data-session-timeout-timer-text="You have been inactive for 10 minutes and will be signed out automatically in 5 minutes if no action is taken. <br> Are you still there?"  data-session-timeout-timer-extra-text=""
    class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
    <div class="modal-dialog__inner">
       <h1 id="dialog-title" class="heading-large">
          You will be signed out soon
       </h1>
+      
       <div class="modal-dialog__inner__text">
          <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions"></div>
          <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div>
       </div>
       <div class="modal-dialog__inner__block">
-         <button class="nhsuk-button js-dialog-close">Stay signed in</button>
+         <button class="nhsuk-button js-dialog-close">Yes, I’m here”</button>
+         <button class="nhsuk-button nhsuk-button--secondary js-dialog-logout">Log out</button>
       </div>
    </div>
 </dialog>
