@@ -53,7 +53,7 @@
 <!--session-timeout-code-->
 
 <dialog id="js-modal-dialog" data-url-redirect="https://prescription-training-ef9f5bce5db3.herokuapp.com/v2/logout-confirm-trainee"
-   data-session-timeout="300" data-session-timeout-warning="300"
+   data-session-timeout="600" data-session-timeout-warning="300"
    data-session-timeout-timer-text="You have been inactive for 10 minutes and will be signed out automatically in 5 minutes if no action is taken. <br><br> Are you still there?"  data-session-timeout-timer-extra-text=""
    class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
    <div class="modal-dialog__inner">
@@ -66,7 +66,7 @@
          <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div>
       </div>
       <div class="modal-dialog__inner__block">
-        <a href="/v2/trainee/dashboard" class="nhsuk-button js-dialog-close">Yes, I’m here</a>
+        <a href="/v2/trainee/dashboard" class="nhsuk-button js-dialog-continue">Yes, I’m here</a>
          <a href="/v2/logout-confirm-trainee" class="nhsuk-button js-dialog-logout nhsuk-button--secondary">Log out</a>
       </div>
    </div>
