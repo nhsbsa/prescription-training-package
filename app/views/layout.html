@@ -83,21 +83,31 @@
     "links": [
       {
         "URL": "/",
-        "label": "Home"
+        "label": "Privacy policies"
       },
       {
-        "URL": "/example-templates",
-        "label": "Page templates"
+        "URL": "/Cookies",
+        "label": "Cookies"
       },
       {
-        "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
-        "label": "Reset data"
-      }
+        "URL": "/Accessibility",
+        "label": "Accessibility"
+      },      
+      {
+        "URL": "/Terms-and-conditions",
+        "label": "Terms and conditions"
+      },
+      {
+        "URL": "/Freedom-of-information",
+        "label": "Freedom of information"
+      },
+      {
+  "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
+  "label": "Reset data"
+}
     ]
   })}}
-
-  
-{% endblock %}
+  {% endblock %}
 
 {% block bodyEnd %}
 <script src="/nhsuk-frontend/nhsuk-frontend.min.js" type="module"></script>

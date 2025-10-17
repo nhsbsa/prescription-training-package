@@ -42,7 +42,7 @@
               </a>
             </li>
             <li class="nhsuk-header__navigation-item">
-              <a class="nhsuk-header__navigation-link" href="/v1/logout-confirm-admin">Sign out</a>
+              <a class="nhsuk-header__navigation-link" href="/v2/logout-confirm-admin">Sign out</a>
             </li>
           </ul>
         </nav>
@@ -61,20 +61,30 @@
     "links": [
       {
         "URL": "/",
-        "label": "Home"
+        "label": "Privacy policies"
       },
       {
-        "URL": "/example-templates",
-        "label": "Page templates"
+        "URL": "/Cookies",
+        "label": "Cookies"
       },
       {
-        "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
-        "label": "Reset data"
-      }
+        "URL": "/Accessibility",
+        "label": "Accessibility"
+      },      
+      {
+        "URL": "/Terms-and-conditions",
+        "label": "Terms and conditions"
+      },
+      {
+        "URL": "/Freedom-of-information",
+        "label": "Freedom of information"
+      },
+      {
+  "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
+  "label": "Reset data"
+}
     ]
   })}}
-
-  
 {% endblock %}
 
 {% block bodyEnd %}

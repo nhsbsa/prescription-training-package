@@ -105,18 +105,32 @@ Prescription Processing Training Package
     "links": [
       {
         "URL": "/",
-        "label": "Home"
+        "label": "Privacy policies"
       },
       {
-        "URL": "/example-templates",
-        "label": "Page templates"
+        "URL": "/Cookies",
+        "label": "Cookies"
       },
       {
-        "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
-        "label": "Reset data"
-      }
+        "URL": "/Accessibility",
+        "label": "Accessibility"
+      },      
+      {
+        "URL": "/Terms-and-conditions",
+        "label": "Terms and conditions"
+      },
+      {
+        "URL": "/Freedom-of-information",
+        "label": "Freedom of information"
+      },
+      {
+  "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
+  "label": "Reset data"
+}
     ]
   })}}
+{% endblock %}
+
 
 
 <dialog id="js-modal-dialog" data-url-redirect="https://prescription-training-ef9f5bce5db3.herokuapp.com/v2/logout-confirm-trainee"
