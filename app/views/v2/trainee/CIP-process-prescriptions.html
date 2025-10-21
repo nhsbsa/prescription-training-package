@@ -1,0 +1,113 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item">
+      <a class="nhsuk-breadcrumb__link" href="dashboard">My dashboard</a>
+    </li>
+    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
+  </ol>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">Process prescriptions</h1>
+<br> 
+
+        <!--div class="nhsuk-hint nhsuk-u-padding-bottom-4" id="contact-hint">
+        Invoice 2 details
+        </div-->
+   
+  
+
+  <!--style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      display: block;
+      width: 1000px;
+    }
+
+    .highlight-text {
+      position: absolute;
+      background-color: hsla(54, 100%, 50%, 0.347); /* Semi-transparent red */
+      padding: 10px 460px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    
+    /* Position each word where you need it */
+    .word1 {
+      top: 505px;
+      left: 50px;
+    }
+
+    input[type=checkbox] {
+  display: none;
+}
+
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  width: 1000px;
+  height: 1000px;
+}
+
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+  </style-->
+
+  <div class="image-container">
+    <img src="/images/cip.png" alt="source">
+    <span class="highlight-text word1"></span>
+  </div>
+  
+
+<br>
+<br>
+
+        <!--a href="dashboard" class="nhsuk-button">Go back to dashboard</a--> 
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
