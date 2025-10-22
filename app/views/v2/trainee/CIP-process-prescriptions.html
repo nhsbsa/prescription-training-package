@@ -1,56 +1,34 @@
-<!-- Use this page as the index for your project -->
-
-<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - change the header and footer 
-    - add custom CSS and JavaScript
--->
 
-<!-- Set the page title -->
 {% block pageTitle %}
 Prescription Processing Training Package
 {% endblock %}
 
-<!-- For adding a breadcrumb -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     <li class="nhsuk-breadcrumb__item">
       <a class="nhsuk-breadcrumb__link" href="dashboard">My dashboard</a>
     </li>
-    <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
 </nav>
 {% endblock %}
 
-<!-- For adding a back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
-{% block outerContent %}
-{% endblock %}
-
-<!-- For adding page content -->
-<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      
-      <!-- Change the page title here -->
-      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">Process prescriptions</h1>
-<br> 
 
-        <!--div class="nhsuk-hint nhsuk-u-padding-bottom-4" id="contact-hint">
-        Invoice 2 details
-        </div-->
-   
-  
+ <div class="container">
+  <div class="image-container">
+  <input type="checkbox" id="zoomCheck">
+  <label for="zoomCheck">
+    <img src="/images/cip-1.png" alt="invoice" style="max-width: 80%;">
+  </label>
+</div>
+</div>    
 
-  <!--style>
+  <style>
     .image-container {
       position: relative;
       display: inline-block;
@@ -70,14 +48,13 @@ Prescription Processing Training Package
       font-weight: bold;
     }
 
-    
     /* Position each word where you need it */
     .word1 {
-      top: 505px;
+      top: 500px;
       left: 50px;
     }
 
-    input[type=checkbox] {
+       input[type=checkbox] {
   display: none;
 }
 
@@ -92,22 +69,9 @@ input[type=checkbox]:checked ~ label > img {
   transform: scale(2);
   cursor: zoom-out;
 }
-  </style-->
+  </style>
 
-  <div class="image-container">
-    <img src="/images/cip.png" alt="source">
-    <span class="highlight-text word1"></span>
-  </div>
-  
+</div>
+</div>
 
-<br>
-<br>
-
-        <!--a href="dashboard" class="nhsuk-button">Go back to dashboard</a--> 
-
-
-      <!-- End of content -->
-
-    </div>
-  </div>
 {% endblock %}
