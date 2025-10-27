@@ -83,34 +83,32 @@ Prescription Processing Training Package
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
-  {{ footer({
-    "links": [
+ {{ footer({
+  meta: {
+    items: [
       {
-        "URL": "/",
-        "label": "Privacy policies"
+        href: "#",
+        text: "Accessibility statement"
       },
       {
-        "URL": "/Cookies",
-        "label": "Cookies"
+        href: "#",
+        text: "Contact us"
       },
       {
-        "URL": "/Accessibility",
-        "label": "Accessibility"
-      },      
-      {
-        "URL": "/Terms-and-conditions",
-        "label": "Terms and conditions"
+        href: "#",
+        text: "Cookies"
       },
       {
-        "URL": "/Freedom-of-information",
-        "label": "Freedom of information"
+        href: "#",
+        text: "Privacy policy"
       },
       {
-  "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
-  "label": "Reset data"
-}
+        href: "#",
+        text: "Terms and conditions"
+      }
     ]
-  })}}
+  }
+}) }}
 
 
 
