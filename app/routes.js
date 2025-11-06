@@ -35,9 +35,9 @@ router.post(/questionremove/, (req, res) => {
   }
 });
 
-router.post(/continueerrror/, (req, res) => {
-  const { continueerrror } = req.session.data;
-  if (continueerrror === 'yes') {
+router.post(/continueerror/, (req, res) => {
+  const { continueerror } = req.session.data;
+  if (continueerror === 'yes') {
     res.redirect('remove-answer-pool');
   } else {
     res.redirect('error-review-3');
