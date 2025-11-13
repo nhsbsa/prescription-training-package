@@ -21,8 +21,8 @@ Prescription Processing Training Package
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
     
-    <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">Dashboard</a></li>
-   <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="reports">List of reports</a></li>
+    <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+   <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="reports">View reports</a></li>
    
   </ol>
 
@@ -48,10 +48,10 @@ Prescription Processing Training Package
 
       <!-- Change the page title here -->
      
-      <h1 class="nhsuk-heading-xl">Admin check data</h1>
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-3">Administrator checking data</h1>
 
-        <p class="nhsuk-body">Select the month, report type and enter the checker name to export the correct report</p>
-
+        <p class="nhsuk-body">Complete the fields to export administrator checking data as an Excel file.</p>
+<br>
         <!--Fieldset 1-->  
       <style>
   .dropdown-row {
@@ -108,8 +108,8 @@ Prescription Processing Training Package
                 Report type
             </label>
             <select onchange="la(this.value)" class="nhsuk-select" id="select-1" name="select-1" style="width:400px">
-              <option value="admin-check-data">Select a report type</option>
-              <option value="Individual" selected>Individual daily summary</option>
+              <option value="admin-check-data" selected>Select a report type</option>
+              <option value="Individual">Individual daily summary</option>
                 <option value="monthly">Monthly summary</option>
               <option value="total">Total daily summary</option>
             </select>
