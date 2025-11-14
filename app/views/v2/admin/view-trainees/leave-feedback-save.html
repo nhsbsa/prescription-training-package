@@ -18,23 +18,13 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="list-trainees">View trainees</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="view-trainee">Trainee profile</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="view-error-list">View all errors</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="error-details-2">Error details</a>
-    </li>
+<li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/list-trainees">View trainees</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/view-trainee">Trainee profile</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/view-error-list">View all errors</a></li>
     <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
+
 </nav>
 {% endblock %}
 
@@ -43,25 +33,16 @@ Prescription Processing Training Package
 {% block content %}
 
 
-            <div class="nhsuk-panel">
-              <h1 class="nhsuk-panel__title">
-                Feedback updated
-              </h1>
-            </div>
 
-<br>
-
-<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">Your feedback</h1>
-<span class="nhsuk-caption-xl nhsuk-u-margin-bottom-4">James Jacob (jojac)</span>
-<p class="nhsuk-body-m nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-5">Feedback for 23 May 2025 errors</p>
+<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">View your feedback</h1>
+<span class="nhsuk-caption-xl nhsuk-u-margin-bottom-4">John Doe (jdoe)</span>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Feedback for 23 May 2025 (x errors)</p>
 
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-
-
 <br>
                 <h2 class="nhsuk-heading-m">Comment</h2>
-                <p class="nhsuk-body-m">Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.</p>
+                <!--p class="nhsuk-body-m">Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.</p-->
 
             
 
@@ -78,27 +59,25 @@ Prescription Processing Training Package
                   </tr>
 
                   <tr class="nhsuk-table__row">
-                    <th scope="col" class="nhsuk-table__header">Time taken to give feedback</th>
-                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">30 mins</td>
+                    <th scope="col" class="nhsuk-table__header">Time taken in minutes to give feedback</th>                   
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">30</td>
                   </tr>
 
                   <tr class="nhsuk-table__row">
                     <th scope="col" class="nhsuk-table__header">Date</th>                   
-                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">Feedback left on 30 May 2025 10:23am</td>
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">Feedback left on 23 May 2025 10:23am</td>
                   </tr>
                 </tbody>
               </table>
 
-
-                 <p class="nhsuk-u-margin-top-5"><strong>Notes: </strong>Edited by [Admin Name] on [Date/Time]</p>
-
-                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                  Save and continue
-                </button> -->
-
+              <p class="nhsuk-u-margin-top-5"><strong>Notes: </strong>Edited by [Admin Name] on [Date/Time]</p>
+               
 <br>
 
-              <a href="leave-feedback-edit" class="nhsuk-button">Edit feedback</a>
+
+              <a href="leave-feedback-edit" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Edit feedback
+                 </a> 
 
 
             </div>
