@@ -18,23 +18,13 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="list-trainees">List of trainees</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="view-trainee">Trainee profile</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="view-error-list">Quality check</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="error-details-2">Error details</a>
-    </li>
+    <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/list-trainees">View trainees</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/view-trainee">Trainee profile</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/view-error-list">View all errors</a></li>
     <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
+
 </nav>
 {% endblock %}
 
@@ -44,50 +34,48 @@ Prescription Processing Training Package
 
 
 
-<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">View feedback of James Jacob (jajb)</h1>
-<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Feedback for 22 May 2025 errors</p>
+<h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">View your feedback</h1>
+<span class="nhsuk-caption-xl nhsuk-u-margin-bottom-4">John Doe (jdoe)</span>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Feedback for 23 May 2025 (x errors)</p>
 
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
 <br>
                 <h2 class="nhsuk-heading-m">Comment</h2>
-                <p class="nhsuk-body-m">Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.</p>
+                <!--p class="nhsuk-body-m">Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.</p-->
 
             
 
               <table class="nhsuk-table">
                <tbody class="nhsuk-table__body">
                   <tr>
-                    <th scope="col" class="nhsuk-table__header">Feedback</th>
+                    <th scope="col" class="nhsuk-table__header">Your feedback</th>
                      <td class="nhsuk-table__cell nhsuk-u-text-break-word">Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.</td>
                   </tr>     
 
                   <tr class="nhsuk-table__row">
-                    <th scope="col" class="nhsuk-table__header">Feedback method</th>
+                    <th scope="col" class="nhsuk-table__header">Method of communication</th>
                     <td class="nhsuk-table__cell nhsuk-u-text-break-word">Teams chat</td>
                   </tr>
 
                   <tr class="nhsuk-table__row">
-                    <th scope="col" class="nhsuk-table__header">Time taken</th>                   
-                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">30 mins</td>
+                    <th scope="col" class="nhsuk-table__header">Time taken in minutes to give feedback</th>
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">30</td>
                   </tr>
 
                   <tr class="nhsuk-table__row">
                     <th scope="col" class="nhsuk-table__header">Date</th>                   
-                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">Feedback left on 30 May 2025 10:23am</td>
+                    <td class="nhsuk-table__cell nhsuk-u-text-break-word">Feedback left on 23 May 2025 10:23am</td>
                   </tr>
                 </tbody>
               </table>
 
 
-                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                  Save and continue
-                </button> -->
+               
+                 <a href="leave-feedback-edit" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Edit feedback
+                 </a> 
 
-
-              <a href="leave-feedback-edit-view" class="nhsuk-button">Edit feedback</a>
-
-            
 
             </div>
 

@@ -18,21 +18,10 @@ Prescription Processing Training Package
 {% block beforeContent %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <ol class="nhsuk-breadcrumb__list">
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="list-trainees">View trainees</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="view-trainee">Trainee profile</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="view-error-list">View all errors</a>
-    </li>
-    <li class="nhsuk-breadcrumb__list-item">
-      <a class="nhsuk-breadcrumb__link" href="error-details-2">Error details</a>
-    </li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/list-trainees">View trainees</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/view-trainee">Trainee profile</a></li>
+     <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../view-trainees/view-error-list">View all errors</a></li>
     <!--<li class="nhsuk-breadcrumb__item">Error details</li>-->
   </ol>
 </nav>
@@ -45,8 +34,8 @@ Prescription Processing Training Package
 
 
 <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">Edit your feedback</h1>
-<span class="nhsuk-caption-xl nhsuk-u-margin-bottom-4">James Jacob (jojac)</span>
-<p class="nhsuk-body-m nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-5">Feedback for 23 May 2025 errors</p>
+<span class="nhsuk-caption-xl nhsuk-u-margin-bottom-4">James Jacob (jajb)</span>
+<p class="nhsuk-body-m nhsuk-u-secondary-text-color">Feedback for 23 May 2025 errors</p>
 
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
@@ -59,14 +48,14 @@ Prescription Processing Training Package
               <table class="nhsuk-table">
                <tbody class="nhsuk-table__body">
                   <tr>
-                    <th scope="col" class="nhsuk-table__header">Your feedback</th>
+                    <th scope="col" class="nhsuk-table__header">Feedback</th>
                      <td class="nhsuk-table__cell nhsuk-u-text-break-word">
                         <textarea class="nhsuk-textarea" id="feedback" name="feedback" rows="5" aria-describedby="feedback" style="width: 500px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea> 
                      </td>
                   </tr>     
 
                   <tr class="nhsuk-table__row">
-                    <th scope="col" class="nhsuk-table__header">Method of communication</th>
+                    <th scope="col" class="nhsuk-table__header">Feedback method</th>
                     <td class="nhsuk-table__cell nhsuk-u-text-break-word">
                     <select class="nhsuk-select" id="feedback-method" name="feedback-method" style="width: 500px;">
                         <option value="1">Select option</option>
@@ -79,9 +68,9 @@ Prescription Processing Training Package
                   </tr>
 
                   <tr class="nhsuk-table__row">
-                    <th scope="col" class="nhsuk-table__header">Time taken to give feedback</th>                   
+                    <th scope="col" class="nhsuk-table__header">Time taken in minutes to give feedback</th>                   
                     <td class="nhsuk-table__cell nhsuk-u-text-break-word">
-                    <input class="nhsuk-input nhsuk-input--width-6" id="time-taken" name="time" type="text" style="width: 500px;" value="30 mins">                    
+                    <input class="nhsuk-input nhsuk-input--width-6" id="time-taken" name="time" type="text" style="width: 500px;" value="30">                    
                     </td>
                   </tr>
 
