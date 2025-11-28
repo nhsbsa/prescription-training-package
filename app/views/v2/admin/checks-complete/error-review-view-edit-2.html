@@ -48,6 +48,8 @@ Prescription Processing Training Package
 <span class="nhsuk-caption-xl nhsuk-u-margin-bottom-4">John Philips (Jophi)</span>
 <p class="nhsuk-body-m nhsuk-u-secondary-text-color">Completed on 23 May 2025 at 4:23pm</p>
 
+        
+
 <br>
 
 <div class="nhsuk-grid-row">
@@ -59,9 +61,7 @@ Prescription Processing Training Package
   <div class="nhsuk-grid-column-one-half">
     <!-- Item 1 Section -->
     <h2 class="nhsuk-heading-m">Error stream - Item 1</h2>
-        <div class="nhsuk-hint" id="example-hint">
-          <strong>Notes: </strong> Amy Johnson (amjo)
-        </div>
+        
 
    <dl class="nhsuk-summary-list">
 
@@ -117,7 +117,11 @@ Prescription Processing Training Package
 <br>
 <br>
 
- 
+        <div class="nhsuk-hint" id="example-hint">
+          <strong>Notes: </strong> SAKAD 13:12 18/11/2025
+        </div>
+<br>
+<br> 
  <!-- Error code -->
     <h2 class="nhsuk-heading-m">Add error code</h2>
     <div>
@@ -157,7 +161,7 @@ Prescription Processing Training Package
           Is the master data correct?
         </legend>
 
-        <div class="nhsuk-radios nhsuk-radios--conditional" data-module="nhsuk-radios">
+        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional" data-module="nhsuk-radios">
           <!-- Yes -->
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input"
@@ -179,7 +183,7 @@ Prescription Processing Training Package
                    aria-expanded="false">
             <label class="nhsuk-label nhsuk-radios__label" for="masterdata-no">No</label>
           </div>
-
+          </div>
           <!-- Conditional reveal when "No" selected -->
           <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
                id="conditional-masterdata-no">
@@ -235,14 +239,14 @@ Prescription Processing Training Package
             </fieldset>
 
           </div><!-- end conditional -->
-        </div><!-- end radios -->
+        <!-- end radios -->
       </fieldset>
     </div><!-- end form-group -->
   </div><!-- end details__text -->
 </details>
 
 
-<br>
+
  <a href="error-review-view-confirm" class="nhsuk-button" data-module="nhsuk-button" type="submit">
         Update review
         </a>
