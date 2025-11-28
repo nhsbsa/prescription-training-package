@@ -157,7 +157,7 @@ Prescription Processing Training Package
           Is the master data correct?
         </legend>
 
-        <div class="nhsuk-radios nhsuk-radios--conditional" data-module="nhsuk-radios">
+        <div class="nhsuk-radios nhsuk-radios--inline nhsuk-radios--conditional" data-module="nhsuk-radios">
           <!-- Yes -->
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input"
@@ -179,7 +179,7 @@ Prescription Processing Training Package
                    aria-expanded="false">
             <label class="nhsuk-label nhsuk-radios__label" for="masterdata-no">No</label>
           </div>
-
+          </div>
           <!-- Conditional reveal when "No" selected -->
           <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
                id="conditional-masterdata-no">
@@ -235,14 +235,11 @@ Prescription Processing Training Package
             </fieldset>
 
           </div><!-- end conditional -->
-        </div><!-- end radios -->
+        <!-- end radios -->
       </fieldset>
     </div><!-- end form-group -->
   </div><!-- end details__text -->
 </details>
-
-<br>
-
 
 <br>
  <a href="error-review-view-confirm" class="nhsuk-button" data-module="nhsuk-button" type="submit">
