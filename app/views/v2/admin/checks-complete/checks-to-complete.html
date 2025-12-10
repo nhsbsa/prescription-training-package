@@ -57,12 +57,11 @@ Prescription Processing Training Package
     <div>
       <label class="nhsuk-label" for="select-1">Filter by status</label>
       <select
-        class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
+        class="nhsuk-select nhsuk-input--width-10"
         id="select-1"
-        name="select-1"
-      >
-                        <option value="checks-to-complete" selected>Error review queue</option>
-                            <option value="awaiting-feedback">Awaiting feedback</option>
+        name="select-1">
+        <option value="checks-to-complete" selected>Error review queue</option>
+        <option value="awaiting-feedback">Awaiting feedback</option>
       </select>
     </div>
 
@@ -71,21 +70,36 @@ Prescription Processing Training Package
       <button class="nhsuk-button" onclick="goToSelectedPage()">Search</button>
     </div>
   </div>
-</div>
 
-<script>
+  <script>
   function goToSelectedPage() {
     const select = document.getElementById("select-1");
     const selectedValue = select.value;
     window.location = selectedValue;
   }
 </script>
-</div>
+
+<br>  
+
+  <div style="display: flex; align-items: flex-end; gap: 1rem;">
+    <!-- search trainee -->
+    <div>
+      <label class="nhsuk-label" for="search-trainee">Search trainee name</label>
+      <input type="text" class="nhsuk-select nhsuk-input--width-10" id="search-trainee" name="search-trainee" value=""/>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <a href="checks-to-complete-search" class="nhsuk-button" >Search</a>
+    </div>
+  </div>
 
 
-  <div class="nhsuk-u-padding-bottom-8"></div>
+<br>
+<br>
 
-  <h3 class="nhsuk-heading-s">Error review queue (x)</h3>
+
+  <h3 class="nhsuk-heading-s nhsuk-u-padding-bottom-1">Error review queue (x)</h3>
 
           <table class="nhsuk-table">
             <thead class="nhsuk-table__head">
