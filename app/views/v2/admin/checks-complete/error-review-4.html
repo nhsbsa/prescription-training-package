@@ -239,6 +239,7 @@ Prescription Processing Training Package
 
 <!-- Radios 1 -->
 
+<form method="post" action="errorcomplete">
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
@@ -303,9 +304,8 @@ Prescription Processing Training Package
                 </div>
               </div>
             </fieldset>
+            <!-- Conditional reveal when "Yes" or "No" selected -->
 
-
-            <form method="post" action="questionremove">
             <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-4">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
                 Do you want to remove answer from pool?
@@ -314,18 +314,18 @@ Prescription Processing Training Package
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input"
                          id="remove-yes"
-                         name="questionremove"
+                         name="errorcomplete"
                          type="radio"
                          value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="remove-yes">Yes</label>
+                  <label class="nhsuk-label nhsuk-radios__label" for="yes">Yes</label>
                 </div>
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input"
                          id="remove-no"
-                         name="questionremove"
+                         name="errorcomplete"
                          type="radio"
                          value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="remove-no">No</label>
+                  <label class="nhsuk-label nhsuk-radios__label" for="no">No</label>
                 </div>
               </div>
             </fieldset>
@@ -339,7 +339,7 @@ Prescription Processing Training Package
 
 <br>
 
-<a href="confirmation-error-review" class="nhsuk-button" type="submit">Save and complete error review</a>
+<button class="nhsuk-button" type="submit">Save and complete error review</button>
 
 </form>
 
