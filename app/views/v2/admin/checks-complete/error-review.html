@@ -137,6 +137,7 @@ Prescription Processing Training Package
 
 <!-- Radios 1 -->
 
+<form method="post" action="questionremove">
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
@@ -155,23 +156,23 @@ Prescription Processing Training Package
           <!-- Yes -->
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input"
-                   id="masterdata-yes"
+                   id="yes"
                    name="masterdata"
                    type="radio"
                    value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="masterdata-yes">Yes</label>
+            <label class="nhsuk-label nhsuk-radios__label" for="yes">Yes</label>
           </div>
 
           <!-- No -->
           <div class="nhsuk-radios__item">
             <input class="nhsuk-radios__input"
-                   id="masterdata-no"
+                   id="no"
                    name="masterdata"
                    type="radio"
                    value="no"
                    aria-controls="conditional-masterdata-no"
                    aria-expanded="false">
-            <label class="nhsuk-label nhsuk-radios__label" for="masterdata-no">No</label>
+            <label class="nhsuk-label nhsuk-radios__label" for="no">No</label>
           </div>
           </div>
           <!-- Conditional reveal when "No" selected -->
@@ -203,7 +204,7 @@ Prescription Processing Training Package
             </fieldset>
 
 
-            <form method="post" action="questionremove">
+
             <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-4">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
                 Do you want to remove answer from pool?
