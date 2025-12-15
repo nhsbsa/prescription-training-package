@@ -1,0 +1,144 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+   
+  </ol>
+
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+     
+      <h1 class="nhsuk-heading-xl">Checks to complete</h1>
+
+      <p class="nhsuk-body"><a href="review-history">Your review history</a> </p>
+
+<!-- Filter & Go Button -->
+  <div style="display: flex; align-items: flex-end; gap: 1rem;">
+    <!-- Dropdown -->
+    <div>
+      <label class="nhsuk-label" for="select-1">Filter by status</label>
+      <select
+        class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-10"
+        id="select-1"
+        name="select-1"
+      >
+                        <option value="checks-to-complete">Error review queue</option>
+                            <option value="awaiting-feedback" selected>Awaiting feedback</option>
+      </select>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <button class="nhsuk-button" onclick="goToSelectedPage()">Search</button>
+    </div>
+  </div>
+
+<br> 
+
+<script>
+  function goToSelectedPage() {
+    const select = document.getElementById("select-1");
+    const selectedValue = select.value;
+    window.location = selectedValue;
+  }
+</script>
+
+  <div style="display: flex; align-items: flex-end; gap: 1rem;">
+    <!-- search trainee -->
+    <div>
+      <label class="nhsuk-label" for="search-trainee">Enter name or cipher</label>
+      <input type="text" class="nhsuk-select nhsuk-input--width-10" id="search-trainee" name="search-trainee" value="John Philips (JOPHIL)"/>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <a href="awaiting-feedback-search" class="nhsuk-button" >Search</a>
+    </div>
+  </div>
+
+  <p class="nhsuk-body nhsuk-u-padding-top-3"><a href="awaiting-feedback">Clear search</a> </p>
+
+
+
+<br>
+<p class="nhsuk-body">Showing results for "John Philips (JOPHIL)"</p>
+
+  <h2 class="nhsuk-heading-s nhsuk-u-padding-bottom-1">Error review queue (x)</h2>
+
+          <table class="nhsuk-table">
+            <thead class="nhsuk-table__head">
+                <tr>
+                <th scope="col" class="nhsuk-table__header">Trainee name</th>
+                <th scope="col" class="nhsuk-table__header">Date</th>
+                <th scope="col" class="nhsuk-table__header">Latest checker</th>
+                <th scope="col" class="nhsuk-table__header">Prescriptions processed</th>
+                <th scope="col" class="nhsuk-table__header">Total errors</th>
+                <th scope="col" class="nhsuk-table__header">Errors reviewed</th>
+                <th scope="col" class="nhsuk-table__header">Total processing time</th>
+                </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="error-review">John Philips (JOPHIL)</a></td>
+                <td class="nhsuk-table__cell">15 May 2025</td>
+                <td class="nhsuk-table__cell">Amy Johnson (AMJO)</td>
+                <td class="nhsuk-table__cell">104</td>
+                <td class="nhsuk-table__cell">130</td>
+                <td class="nhsuk-table__cell">80</td>
+                <td class="nhsuk-table__cell">212</td>
+                </td>
+                </tr>
+            </tbody>
+          </table>
+
+
+
+
+     
+ <a href="/images/Checks to complete(Sheet1).csv" download class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Export as CSV
+</a>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
