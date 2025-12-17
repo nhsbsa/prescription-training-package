@@ -1,0 +1,117 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-admin.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Prescription Processing Training Package
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    
+    <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="../dashboard">My dashboard</a></li>
+    <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="checks-to-complete">Checks to complete</a></li>
+
+  </ol>
+
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+
+  <div class="nhsuk-grid-row">
+
+        <div class="nhsuk-grid-column-full">
+
+
+      <!-- Change the page title here -->
+
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">My error review history</h1>
+
+      <p class="nhsuk-body nhsuk-u-margin-bottom-5">View all your completed error reviews or filter reviews by date.</p>
+
+<!-- Filter & Go Button -->
+
+ <!-- Label and hint ABOVE -->
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example-day">Filter by date</label>
+  <div class="nhsuk-hint" id="example-hint">
+    For example, 15 3 2025
+  </div>
+
+  <!-- FLEX CONTAINER -->
+
+  <div style="display: flex; gap: 6px; align-items: flex-end;">
+
+    <!-- DATE INPUTS -->
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group" style="margin: 0;">
+      <div class="nhsuk-date-input" id="example">
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group" style="margin-bottom: 0;">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">Day</label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+              id="example-day" name="example[day]" type="text" inputmode="numeric" value="15">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group" style="margin-bottom: 0;">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">Month</label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+              id="example-month" name="example[month]" type="text" inputmode="numeric" value="3">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group" style="margin-bottom: 0;">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">Year</label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+              id="example-year" name="example[year]" type="text" inputmode="numeric" value="2025">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <div style="margin-bottom: -33px;">
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Search</button>
+    </div>
+
+  </div>
+</div>
+
+
+<p class="nhsuk-body nhsuk-u-padding-top-1">
+  <a href="#">Clear search</a>
+</p>
+
+
+
+<p class="nhsuk-u-padding-bottom-3">You did not complete any reviews on 15 March 2025. Search again or <a href="review-history">view your complete review history.</a></p>
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
