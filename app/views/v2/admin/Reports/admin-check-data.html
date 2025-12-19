@@ -83,15 +83,31 @@ Prescription Processing Training Package
 
 <!-- Checker dropdown (hidden by default) -->
 <div class="nhsuk-form-group" id="checker-wrapper" style="display: none;">
-  <label class="nhsuk-label" for="checker-select">Select a checker</label>
-  <select class="nhsuk-select" id="checker-select" name="checker" style="width:300px">
+  <label class="nhsuk-label" for="search-checker">
+    Enter checker name or cipher
+  </label>
 
-    <!-- Replace with real checker list -->
-    <option value="" selected>Select a checker</option>
-    <option value="checker1">John Smith</option>
-    <option value="checker2">Sarah John</option>
-    <option value="checker3">James Walker</option>
-  </select>
+  <input
+    type="text"
+    class="nhsuk-select nhsuk-input--width-10"
+    id="search-checker"
+    name="search-checker"
+    list="checker-list"
+    style="width: 400px;"
+  />
+
+  <datalist id="checker-list">
+    <option value="John Smith"></option>
+    <option value="Jane Doe"></option>
+    <option value="James Walker"></option>
+    <option value="Rachel Green"></option>
+    <option value="Mathew Johnson"></option>
+    <option value="John Philips"></option>
+    <option value="Smith Johns"></option>
+    <option value="Doe Jane"></option>
+    <option value="Walker James"></option>
+    <option value="Green Rachel"></option>
+  </datalist>
 </div>
 
 
