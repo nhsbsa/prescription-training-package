@@ -50,7 +50,7 @@ Prescription Processing Training Package
 
       <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">Review history</h1>
 
-      <p class="nhsuk-body">View all your completed error reviews or filter reviews by date.</p>
+      <p class="nhsuk-body">View all completed error reviews or filter reviews by date.</p>
 
 <!-- Filter & Go Button -->
 
@@ -99,18 +99,35 @@ Prescription Processing Training Package
   </div>
 </div>
 
+<!-- Search trainee -->
+  <label class="nhsuk-label" for="example-day">Filter by name</label>
 
+     <div style="display: flex; gap: 25px; align-items: flex-end;">
+    <!-- search trainee -->
+    <div>
+      <label class="nhsuk-label" for="search-trainee">Enter checker name or cipher</label>
+      <input type="text" class="nhsuk-select" id="search-trainee" name="search-trainee" value="" style="width: 250px;"/>
+    </div>
+
+    <!-- Go Button -->
+    <div style="margin-bottom: -33px;">
+      <a href="checks-to-complete-search" class="nhsuk-button" >Search</a>
+    </div>
+
+  </div>
+
+<br>
 
 
   <div class="nhsuk-u-padding-bottom-4"></div>
 
-  <h3 class="nhsuk-heading-s">All your completed reviews (x)</h3>
+  <h3 class="nhsuk-heading-s">Completed reviews history (x)</h3>
 
           <table class="nhsuk-table">
             <thead class="nhsuk-table__head">
                 <tr>
                 <th scope="col" class="nhsuk-table__header">Trainee name</th>
-                <th scope="col" class="nhsuk-table__header">Review completed dates</th>
+                <th scope="col" class="nhsuk-table__header">Review completed date</th>
                 <th scope="col" class="nhsuk-table__header">Latest checker</th>
                 <th scope="col" class="nhsuk-table__header">Prescriptions processed</th>
                 <th scope="col" class="nhsuk-table__header">Total errors</th>
