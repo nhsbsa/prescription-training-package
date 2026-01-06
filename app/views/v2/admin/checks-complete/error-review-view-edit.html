@@ -112,23 +112,37 @@ Prescription Processing Training Package
 
 
 <br>
-<br>
 
- 
- <!-- Error code -->
-    <h2 class="nhsuk-heading-m">Enter error code</h2>
-    <div>
-      <label class="nhsuk-label" for="status"><span class="nhsuk-u-visually-hidden">Add error code</span></label>
-      <input class="nhsuk-input" id="error-code" name="error-code" type="text" aria-describedby="enter-error-code">
-        <!--select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="status" name="status" type="text" inputmode="numeric" style="width: 470px;">
-            <option value="Select">Choose error code</option>
-            <option value="A1">Incorrect drug keyed (A1)</option>
-            <option value="A2">Incorrect drug confirmed (A2)</option>
-            <option value="B1">Incorrect appliance keyed (B1)</option>
-            <option value="B2">Incorrect appliance confirmed (B2)</option>
-             <option value="C1">Incorrect strength keyed (C1)</option>
-        </select-->
-    </div>
+
+<!-- Error code -->
+<h2 class="nhsuk-heading-m">Add error code</h2>
+  <div class="nhsuk-form-group" id="checker-wrapper">
+
+  <input
+    type="text"
+    class="nhsuk-select nhsuk-input--width-10"
+    id="search-checker"
+    name="search-checker"
+    list="checker-list"
+    style="width: 400px;"/>
+  
+
+  <datalist id="checker-list">
+          <option value="(1A1)Incorrect drug keyed"></option>
+          <option value="(1A2)Incorrect drug confirmed"></option>
+          <option value="(1B1)Incorrect appliance keyed"></option>
+          <option value="(1B2)Incorrect appliance confirmed"></option>
+          <option value="(1C1)Incorrect strength keyed"></option>
+          <option value="(1C2)Incorrect strength confirmed"></option>
+          <option value="(2A1)Incorrect dosage keyed"></option>
+          <option value="(2A2)Incorrect dosage confirmed"></option>
+          <option value="(2B1)Incorrect frequency keyed"></option>
+          <option value="(2B2)Incorrect frequency confirmed"></option>
+          <option value="(3A1)GN Omitted keyed"></option>  
+          <option value="(3J)Other"></option>
+          <option value="(2C)Special container"></option>
+  </datalist>
+</div>
 
 <br>
  
