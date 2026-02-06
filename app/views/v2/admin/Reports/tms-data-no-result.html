@@ -79,7 +79,7 @@ Prescription Processing Training Package
   <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
     
       <label class="nhsuk-label">
-        Date
+       Processing Date
       </label>
       <div class="nhsuk-hint" id="example-hint">
       For example, 15 3 2025
@@ -108,6 +108,16 @@ Prescription Processing Training Package
       </div>
     </div>
   </fieldset>
+</div>
+
+<!-- Report type dropdown -->
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="report-select">Report type</label>
+  <select class="nhsuk-select" id="report-select" name="report" style="width:400px">
+    <option value="" selected>Select a report type</option>
+    <option value="tms-data">TMS data</option>
+    <option value="trainee-recording-sheet">Trainee recording sheet</option>
+  </select>
 </div>
 
 <br>
